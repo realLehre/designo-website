@@ -19,7 +19,7 @@ body {
 .header {
   @include c.flex;
   align-items: flex-start;
-  width: 80%;
+  width: 90%;
   max-width: 1400px;
   margin-inline: auto;
 
@@ -73,7 +73,7 @@ body {
 
 .hero {
   position: relative;
-  width: 80%;
+  width: 90%;
   max-width: 1400px;
   margin-inline: auto;
   padding: 30px 50px;
@@ -144,11 +144,11 @@ body {
 }
 
 #services-container {
-  margin-top: 50px;
+  margin-top: 120px;
 }
 
 .services {
-  width: 80%;
+  width: 90%;
   max-width: 1400px;
   margin-inline: auto;
   display: grid;
@@ -249,6 +249,69 @@ body {
           color: c.$pri_peach;
         }
       }
+    }
+  }
+}
+
+#values-container {
+  margin-top: 120px;
+}
+
+.values {
+  @include c.flex;
+  width: 90%;
+  max-width: 1400px;
+  margin-inline: auto;
+
+  & .value {
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    &-heading {
+      font-size: map-get(c.$font-sizes, h3);
+      font-weight: c.$font-weight_medium;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+#cta-container {
+  margin-top: 120px;
+}
+
+.cta {
+  width: 90%;
+  max-width: 1400px;
+  margin-inline: auto;
+  @include c.flex;
+  background: c.$pri_peach;
+  border-radius: 12px;
+  padding: 40px 50px;
+
+  &-content {
+    width: 50%;
+    color: c.$pri_white;
+
+    &-header {
+      font-size: map-get(c.$font-sizes, H2);
+      font-weight: c.$font-weight_medium;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    &-copy {
+      font-size: map-get(c.$font-sizes, body);
+    }
+  }
+
+  &-btn {
+    & a {
+      @include c.button_on_dark;
     }
   }
 }
