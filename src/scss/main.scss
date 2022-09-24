@@ -2,8 +2,8 @@
 
 body {
   font-family: c.$font-family;
-  padding-top: 50px;
   background: c.$pri_white;
+  padding-bottom: 50px;
 }
 
 #header-container {
@@ -161,39 +161,94 @@ body {
 
   & .service {
     position: relative;
-    height: 640px;
-    background-image: url('../../assets/home/desktop/image-web-design-large.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: c.$pri_white;
     overflow: hidden;
+    cursor: pointer;
 
     &:after {
       content: '';
       position: absolute;
       bottom: 0;
       left: 0;
-      width: 100%;
+      width: 0;
       height: 100%;
-      background: black;
-      opacity: 0.5;
-      z-index: 2;
+      background: c.$pri_peach;
+      opacity: 0.7;
+      z-index: 1;
+      @include c.transition;
+    }
+
+    &:hover {
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: c.$pri_peach;
+        opacity: 0.7;
+        z-index: 1;
+      }
     }
 
     &.web {
+      background-image: url('../../assets/home/desktop/web-design-large.png');
       grid-area: web;
+
+      &:after {
+        top: 0;
+        width: 100%;
+        height: 0;
+      }
+
+      &:hover {
+        &:after {
+          height: 100%;
+        }
+      }
     }
 
     &.app {
       height: 308px;
-      background-image: url('../../assets/home/desktop/image-app-design.jpg');
+      background-image: url('../../assets/home/desktop/app-design.jpg');
       grid-area: app;
     }
 
     &.graphic {
       height: 308px;
-      background-image: url('../../assets/home/desktop/image-graphic-design.jpg');
+      background-image: url('../../assets/home/desktop/graphic-design.jpg');
       grid-area: graphic;
+    }
+
+    & .content {
+      position: relative;
+      text-align: center;
+      z-index: 2;
+
+      & .service-type {
+        font-size: map-get(c.$font-sizes, H1);
+        text-transform: uppercase;
+        font-weight: c.$font-weight_medium;
+        margin-bottom: 10px;
+      }
+
+      & .link a {
+        color: c.$pri_white;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        cursor: pointer;
+
+        & i {
+          color: c.$pri_peach;
+        }
+      }
     }
   }
 }
