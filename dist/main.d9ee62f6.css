@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@200;300;400;500;600;700&family=Jost:wght@300;400;500;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  padding-top: 50px;
+  background: #ffffff;
+}
+
+#header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  padding: 30px 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: flex-start;
+  width: 80%;
+  margin-inline: auto;
+}
+.header .logo {
+  width: 196px;
+}
+.header .logo img {
+  width: 100%;
+}
+.header .links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .links .link:not(:last-child) {
+  margin-right: 25px;
+}
+.header .links .link a {
+  position: relative;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #333136;
+}
+.header .links .link a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #333136;
+  transition: all 500ms ease-in-out;
+}
+.header .links .link a:hover:after {
+  width: 100%;
+}
+
+#hero-container {
+  margin-top: 92px;
+}
+
+.hero {
+  position: relative;
+  width: 80%;
+  margin-inline: auto;
+  padding: 100px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e7816b;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.hero-contents {
+  width: 540px;
+  color: #ffffff;
+}
+.hero-contents .hero-header {
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.hero-contents .hero-copy {
+  font-size: 16px;
+  font-weight: 400;
+  width: 445px;
+  margin: 30px 0;
+}
+.hero-contents .hero-btn {
+  display: block;
+}
+.hero-contents .hero-btn a {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 500;
+  background: #ffffff;
+  color: #1d1c1e;
+  padding: 15px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 500ms ease-in-out;
+}
+.hero-contents .hero-btn a:hover {
+  background: #ffad9b;
+  color: #f1f3f5;
+}
+.hero-img {
+  width: 620px;
+  position: absolute;
+  right: -100px;
+  top: -100px;
+}
+
+/*# sourceMappingURL=/main.d9ee62f6.css.map */

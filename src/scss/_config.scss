@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@200;300;400;500;600;700&family=Jost:wght@300;400;500;600&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+$font-family: 'Jost', sans-serif;
+
+$font-sizes: (
+  'H1': 48px,
+  'H2': 40px,
+  'H3': 20px,
+  'body': 16px,
+  'links': 14px,
+);
+
+$font-weight_regular: 400;
+$font-weight_medium: 500;
+
+$pri_peach: #e7816b;
+$pri_black: #1d1c1e;
+$pri_white: #ffffff;
+
+$sec_light-peach: #ffad9b;
+$sec_dark-grey: #333136;
+$sec_light-grey: #f1f3f5;
+
+@mixin button_on_light {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: $font-weight_medium;
+  background: $pri_peach;
+  color: $pri_white;
+  padding: 15px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  @include transition();
+
+  &:hover {
+    background: $sec_light-peach;
+  }
+}
+
+@mixin button_on_dark {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: $font-weight_medium;
+  background: $pri_white;
+  color: $pri_black;
+  padding: 15px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  @include transition();
+
+  &:hover {
+    background: $sec_light-peach;
+    color: $sec_light-grey;
+  }
+}
+
+@mixin transition {
+  transition: all 500ms ease-in-out;
+}
+
+@mixin flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
