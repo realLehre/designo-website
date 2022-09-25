@@ -1,2 +1,221 @@
 @use 'config' as c;
 @import 'shared';
+
+body {
+  font-family: c.$font-family;
+  background: c.$pri_white;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+#hero-container {
+  position: relative;
+  width: 90%;
+  max-width: 1400px;
+  margin-inline: auto;
+  margin-top: 110px;
+  z-index: 4;
+  overflow: hidden;
+}
+
+.hero-pattern {
+  position: absolute;
+  right: 0;
+  top: -80%;
+  z-index: 3;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1) rotate(180deg);
+}
+
+.hero {
+  background: c.$pri_peach;
+  border-radius: 12px;
+  padding: 70px 70px;
+
+  &-content {
+    position: relative;
+    color: c.$pri_white;
+    text-align: center;
+    z-index: 4;
+
+    &-header {
+      font-size: map-get(c.$font-sizes, H1);
+      font-weight: c.$font-weight_medium;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    &-copy {
+      font-size: map-get(c.$font-sizes, body);
+      width: 400px;
+      margin-inline: auto;
+    }
+  }
+}
+
+#core-container {
+  position: relative;
+  z-index: 3;
+  margin-top: 92px;
+}
+
+.cores {
+  width: 90%;
+  max-width: 1400px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-row-gap: 30px;
+  grid-column-gap: 10px;
+}
+
+.core {
+  width: 350px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-inline: auto;
+
+  &-img {
+    width: 350px;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  &-content {
+    width: 350px;
+    background: c.$core-bg;
+    padding: 40px 30px;
+    text-align: center;
+    margin-top: -20px;
+
+    &-header {
+      font-size: map-get(c.$font-sizes, H3);
+      font-weight: c.$font-weight_medium;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      color: c.$pri_peach;
+      margin-bottom: 5px;
+    }
+
+    &-copy {
+      font-size: map-get(c.$font-sizes, body);
+    }
+  }
+}
+
+#services-container {
+  position: relative;
+  margin-top: 120px;
+  z-index: 3;
+}
+
+.services {
+  width: 90%;
+  max-width: 1400px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 20px;
+
+  & .service {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: c.$pri_white;
+    overflow: hidden;
+    cursor: pointer;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: c.$pri_peach;
+      opacity: 0.7;
+      z-index: 1;
+      @include c.transition;
+    }
+
+    &:hover {
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: c.$pri_peach;
+        opacity: 0.7;
+        z-index: 1;
+      }
+    }
+
+    &.web {
+      background-image: url('../../assets/home/desktop/web-design-large.png');
+
+      &:after {
+        top: 0;
+        width: 100%;
+        height: 0;
+      }
+
+      &:hover {
+        &:after {
+          height: 100%;
+        }
+      }
+    }
+
+    &.app {
+      height: 308px;
+      background-image: url('../../assets/home/desktop/app-design.jpg');
+    }
+
+    &.graphic {
+      height: 308px;
+      background-image: url('../../assets/home/desktop/graphic-design.jpg');
+    }
+
+    & .content {
+      position: relative;
+      text-align: center;
+      z-index: 2;
+
+      & .service-type {
+        font-size: map-get(c.$font-sizes, H1);
+        text-transform: uppercase;
+        font-weight: c.$font-weight_medium;
+        margin-bottom: 10px;
+      }
+
+      & .link {
+        color: c.$pri_white;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        cursor: pointer;
+
+        & i {
+          color: c.$pri_peach;
+        }
+      }
+    }
+  }
+}
+
+.bg-pattern.pattern-1 {
+  position: absolute;
+  top: 200px;
+  z-index: 1;
+}
