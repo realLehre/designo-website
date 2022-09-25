@@ -83,15 +83,31 @@ a {
   width: 100%;
 }
 
-#cta-container {
-  margin-top: 50px;
-  transform: translateY(70px);
+.bg-pattern.pattern-1 {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
 }
 
-.cta {
+#cta-container {
+  position: relative;
   width: 90%;
   max-width: 1400px;
   margin-inline: auto;
+  margin-top: 50px;
+  transform: translateY(70px);
+  z-index: 4;
+  overflow: hidden;
+}
+
+.cta-pattern {
+  position: absolute;
+  right: 0;
+  top: -50%;
+  z-index: 3;
+}
+
+.cta {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -100,8 +116,10 @@ a {
   padding: 70px 70px;
 }
 .cta-content {
+  position: relative;
   width: 40%;
   color: #ffffff;
+  z-index: 4;
 }
 .cta-content-header {
   font-size: 40px;
@@ -111,6 +129,10 @@ a {
 }
 .cta-content-copy {
   font-size: 16px;
+}
+.cta-btn {
+  position: relative;
+  z-index: 4;
 }
 .cta-btn a {
   display: inline-block;
@@ -130,9 +152,11 @@ a {
 }
 
 footer {
+  position: relative;
   background: #1d1c1e;
   color: #ffffff;
   padding: 130px 0px 40px;
+  z-index: 3;
 }
 
 .footer {
@@ -324,19 +348,18 @@ a {
     flex-direction: column;
   }
   .values .value {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-  }
-  .values .value-content {
-    text-align: left;
-    margin-left: 40px;
+    flex-direction: row;
   }
   .values .value:not(:last-child) {
     margin-right: 0px;
+    margin-bottom: 50px;
   }
-  .values .value-heading {
+  .values .value-content {
+    width: 70%;
+    text-align: left;
+    margin-left: 30px;
+  }
+  .values .value-content .value-heading {
     margin-bottom: 10px;
   }
   .cta {
@@ -377,6 +400,9 @@ a {
   }
   .footer-bottom-content .address {
     margin-right: 30px;
+  }
+  .bg-pattern {
+    display: none;
   }
 }
 

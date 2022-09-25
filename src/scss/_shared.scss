@@ -61,23 +61,41 @@
   }
 }
 
-#cta-container {
-  margin-top: 50px;
-  transform: translateY(70px);
+.bg-pattern.pattern-1 {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
 }
 
-.cta {
+#cta-container {
+  position: relative;
   width: 90%;
   max-width: 1400px;
   margin-inline: auto;
+  margin-top: 50px;
+  transform: translateY(70px);
+  z-index: 4;
+  overflow: hidden;
+}
+
+.cta-pattern {
+  position: absolute;
+  right: 0;
+  top: -50%;
+  z-index: 3;
+}
+
+.cta {
   @include c.flex;
   background: c.$pri_peach;
   border-radius: 12px;
   padding: 70px 70px;
 
   &-content {
+    position: relative;
     width: 40%;
     color: c.$pri_white;
+    z-index: 4;
 
     &-header {
       font-size: map-get(c.$font-sizes, H2);
@@ -92,6 +110,8 @@
   }
 
   &-btn {
+    position: relative;
+    z-index: 4;
     & a {
       @include c.button_on_dark;
     }
@@ -99,9 +119,11 @@
 }
 
 footer {
+  position: relative;
   background: c.$pri_black;
   color: c.$pri_white;
   padding: 130px 0px 40px;
+  z-index: 3;
 }
 
 .footer {
