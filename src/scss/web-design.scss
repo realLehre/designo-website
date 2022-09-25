@@ -92,6 +92,17 @@ body {
     padding: 40px 30px;
     text-align: center;
     margin-top: -20px;
+    cursor: pointer;
+    @include c.transition;
+
+    &:hover {
+      background: c.$pri_peach;
+      color: c.$pri_white;
+
+      & .core-content-header {
+        color: c.$pri_white;
+      }
+    }
 
     &-header {
       font-size: map-get(c.$font-sizes, H3);
@@ -128,6 +139,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 12px;
+    height: 308px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -163,28 +175,26 @@ body {
     }
 
     &.web {
-      background-image: url('../../assets/home/desktop/web-design-large.png');
+      background-image: url('../../assets/home/desktop/web-design-small.png');
 
       &:after {
-        top: 0;
-        width: 100%;
-        height: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
       }
 
       &:hover {
         &:after {
-          height: 100%;
+          width: 100%;
         }
       }
     }
 
     &.app {
-      height: 308px;
       background-image: url('../../assets/home/desktop/app-design.jpg');
     }
 
     &.graphic {
-      height: 308px;
       background-image: url('../../assets/home/desktop/graphic-design.jpg');
     }
 
@@ -219,3 +229,5 @@ body {
   top: 200px;
   z-index: 1;
 }
+
+@import 'others-responsive';
