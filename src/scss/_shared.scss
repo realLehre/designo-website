@@ -1,5 +1,11 @@
 @use 'config' as c;
 
+body {
+  font-family: c.$font-family;
+  background: c.$pri_white;
+  overflow-x: hidden;
+}
+
 #header-container {
   position: fixed;
   top: 0;

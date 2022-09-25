@@ -1,0 +1,120 @@
+@use 'config' as c;
+@import 'shared';
+
+body {
+  font-family: c.$font-family;
+  background: c.$pri_white;
+  overflow-x: hidden;
+}
+
+#about-hero-container {
+  margin-top: 110px;
+}
+
+.about-hero {
+  position: relative;
+  width: 90%;
+  height: auto;
+  max-width: 1400px;
+  margin-inline: auto;
+  @include c.flex;
+  background: c.$pri_peach;
+  padding-left: 50px;
+  border-radius: 12px;
+  z-index: 3;
+  overflow: hidden;
+
+  &-oval {
+    position: absolute;
+    left: -5%;
+    top: -40%;
+    width: 60%;
+    z-index: 2;
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  &-contents {
+    position: relative;
+    color: c.$pri_white;
+    width: 80%;
+    margin-right: 80px;
+    z-index: 3;
+
+    & .about-hero-header {
+      font-size: map-get(c.$font-sizes, H1);
+      margin-bottom: 20px;
+    }
+  }
+
+  &-img {
+    width: 80%;
+    height: 470px;
+    background-image: url('../../assets/about/desktop/image-about-hero.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+#talent-container {
+  margin-top: 120px;
+}
+
+.talent {
+  position: relative;
+  width: 90%;
+  height: auto;
+  max-width: 1400px;
+  margin-inline: auto;
+  @include c.flex;
+  background: c.$core-bg;
+  padding-right: 50px;
+  border-radius: 12px;
+  z-index: 3;
+  overflow: hidden;
+
+  &-img {
+    position: relative;
+    width: 80%;
+    height: 640px;
+    background-image: url('../../assets/about/desktop/image-world-class-talent.jpg');
+    background-position: center;
+    background-size: cover;
+    z-index: 3;
+  }
+
+  &-contents {
+    position: relative;
+    color: c.$pri_black;
+    width: 80%;
+    margin-left: 80px;
+    z-index: 3;
+
+    & .talent-header {
+      font-size: map-get(c.$font-sizes, H2);
+      margin-bottom: 20px;
+      color: c.$pri_peach;
+    }
+
+    & .talent-copy {
+      & span {
+        display: block;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &-pattern {
+    position: absolute;
+    right: 10%;
+    bottom: -3%;
+    width: 60%;
+    z-index: 2;
+
+    & img {
+      width: 100%;
+    }
+  }
+}

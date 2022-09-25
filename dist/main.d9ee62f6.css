@@ -29,6 +29,12 @@ a {
   text-decoration: none;
 }
 
+body {
+  font-family: "Jost", sans-serif;
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
 #header-container {
   position: fixed;
   top: 0;
