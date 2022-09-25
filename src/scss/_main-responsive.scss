@@ -1,0 +1,138 @@
+@use 'config' as c;
+
+@media (max-width: 768px) {
+  .hero {
+    @include c.flex;
+    flex-direction: column;
+    padding-bottom: 0;
+    height: 843px;
+
+    &-contents {
+      margin-right: 0px;
+      text-align: center;
+
+      & .hero-header {
+        font-size: map-get(c.$font-sizes, H1);
+      }
+
+      & .hero-copy {
+        width: 70%;
+        margin-inline: auto;
+      }
+    }
+
+    &-oval {
+      right: -30px;
+      top: 45px;
+    }
+
+    &-img {
+      width: 300px;
+      transform: translateY(5%);
+    }
+  }
+
+  .services {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      'web'
+      'app'
+      'graphic';
+    grid-gap: 20px;
+
+    & .service {
+      height: 200px;
+      &:hover {
+        &:after {
+        }
+      }
+
+      &.web {
+        background-image: url('../../assets/home/desktop/web-design-small.png');
+
+        &:after {
+          left: 0;
+          width: 0%;
+          height: 100%;
+        }
+
+        &:hover {
+          &:after {
+            width: 100%;
+          }
+        }
+      }
+
+      &.app {
+        height: 200px;
+      }
+
+      &.graphic {
+        height: 200px;
+      }
+    }
+  }
+
+  #values-container {
+    margin-top: 80px;
+  }
+
+  .values {
+    flex-direction: column;
+
+    & .value {
+      @include c.flex;
+      text-align: center;
+
+      &-content {
+        text-align: left;
+        margin-left: 40px;
+      }
+
+      &:not(:last-child) {
+        margin-right: 0px;
+      }
+
+      &-heading {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .cta {
+    flex-direction: column;
+    background: c.$pri_peach;
+    border-radius: 12px;
+    padding: 50px 70px;
+
+    &-content {
+      width: 80%;
+      margin-inline: auto;
+      text-align: center;
+
+      &-header {
+        margin-bottom: 20px;
+      }
+
+      &-copy {
+        font-size: map-get(c.$font-sizes, body);
+      }
+    }
+
+    &-btn {
+      margin-top: 30px;
+      & a {
+        @include c.button_on_dark;
+      }
+    }
+  }
+
+  .footer-bottom {
+    &-content {
+      & .address {
+        margin-right: 30px;
+      }
+    }
+  }
+}

@@ -82,8 +82,10 @@ body {
   overflow: hidden;
 
   &-contents {
+    position: relative;
     margin-right: 80px;
     color: c.$pri_white;
+    z-index: 3;
 
     & .hero-header {
       font-size: map-get(c.$font-sizes, H1);
@@ -444,3 +446,5 @@ footer {
     }
   }
 }
+
+@import 'main-responsive';
