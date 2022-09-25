@@ -278,8 +278,112 @@ footer {
   background: #ffad9b;
 }
 
+body {
+  position: relative;
+}
+
+#contact-hero-container {
+  margin-top: 110px;
+}
+
+.contact-hero {
+  position: relative;
+  width: 90%;
+  height: auto;
+  max-width: 1400px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e7816b;
+  padding: 30px 50px;
+  border-radius: 12px;
+  z-index: 3;
+  overflow: hidden;
+}
+.contact-hero-oval {
+  position: absolute;
+  left: -5%;
+  bottom: -1%;
+  width: 60%;
+  z-index: 2;
+}
+.contact-hero-oval img {
+  width: 100%;
+}
+.contact-hero-contents {
+  position: relative;
+  color: #ffffff;
+  z-index: 3;
+  width: 50%;
+}
+.contact-hero-contents .contact-hero-header {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+.contact-hero-form {
+  position: relative;
+  width: 50%;
+  margin-left: 60px;
+  z-index: 3;
+}
+.contact-hero-form form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.contact-hero-form form div {
+  width: 100%;
+}
+.contact-hero-form form div:not(:last-child) {
+  margin-bottom: 30px;
+}
+.contact-hero-form form label {
+  display: block;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 15px;
+  padding-left: 20px;
+  transform: translateY(50%);
+}
+.contact-hero-form form input, .contact-hero-form form textarea {
+  width: 100%;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 15px;
+  padding-bottom: 5px;
+}
+.contact-hero-form form input:focus, .contact-hero-form form textarea:focus {
+  outline: none;
+}
+.contact-hero-form form button {
+  align-self: flex-end;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 500;
+  background: #ffffff;
+  color: #1d1c1e;
+  padding: 15px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 500ms ease-in-out;
+  font-family: "Jost", sans-serif;
+  padding: 15px 40px;
+  border: none;
+}
+.contact-hero-form form button:hover {
+  background: #ffad9b;
+  color: #f1f3f5;
+}
+
 #locations-choice-container {
   margin-top: 120px;
+  margin-bottom: 120px;
 }
 
 .locations-choice {
@@ -317,6 +421,15 @@ footer {
 }
 .location-choice-content a:hover {
   background: #ffad9b;
+}
+
+.bg-pattern {
+  position: absolute;
+}
+
+.bg-pattern.pattern-2 {
+  bottom: 5%;
+  right: -30%;
 }
 
 /*# sourceMappingURL=/contact.21f7e600.css.map */

@@ -1,8 +1,108 @@
 @use 'config' as c;
 @import 'shared';
 
+body {
+  position: relative;
+}
+
+#contact-hero-container {
+  margin-top: 110px;
+}
+
+.contact-hero {
+  position: relative;
+  width: 90%;
+  height: auto;
+  max-width: 1400px;
+  margin-inline: auto;
+  @include c.flex;
+  background: c.$pri_peach;
+  padding: 30px 50px;
+  border-radius: 12px;
+  z-index: 3;
+  overflow: hidden;
+
+  &-oval {
+    position: absolute;
+    left: -5%;
+    bottom: -1%;
+    width: 60%;
+    z-index: 2;
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  &-contents {
+    position: relative;
+    color: c.$pri_white;
+    z-index: 3;
+    width: 50%;
+
+    & .contact-hero-header {
+      font-size: map-get(c.$font-sizes, H1);
+      margin-bottom: 20px;
+    }
+  }
+
+  &-form {
+    position: relative;
+    width: 50%;
+    margin-left: 60px;
+    z-index: 3;
+
+    & form {
+      width: 100%;
+      @include c.flex;
+      flex-direction: column;
+
+      & div {
+        width: 100%;
+
+        &:not(:last-child) {
+          margin-bottom: 30px;
+        }
+      }
+
+      & label {
+        display: block;
+        color: c.$pri_white;
+        font-weight: c.$font-weight_regular;
+        font-size: 15px;
+        padding-left: 20px;
+        transform: translateY(50%);
+      }
+
+      & input,
+      & textarea {
+        width: 100%;
+        border: none;
+        background: transparent;
+        border-bottom: 1px solid c.$pri_white;
+        color: c.$pri_white;
+        font-size: 15px;
+        padding-bottom: 5px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      & button {
+        align-self: flex-end;
+        @include c.button_on_dark;
+        font-family: c.$font-family;
+        padding: 15px 40px;
+        border: none;
+      }
+    }
+  }
+}
+
 #locations-choice-container {
   margin-top: 120px;
+  margin-bottom: 120px;
 }
 
 .locations-choice {
@@ -30,4 +130,13 @@
       @include c.button_on_light;
     }
   }
+}
+
+.bg-pattern {
+  position: absolute;
+}
+
+.bg-pattern.pattern-2 {
+  bottom: 5%;
+  right: -30%;
 }
