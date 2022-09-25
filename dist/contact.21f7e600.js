@@ -184,12 +184,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"src/scss/about.scss":[function(require,module,exports) {
+},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"src/scss/contact.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\..\\assets\\about\\desktop\\image-about-hero.jpg":[["image-about-hero.3f430a63.jpg","assets/about/desktop/image-about-hero.jpg"],"assets/about/desktop/image-about-hero.jpg"],"./..\\..\\assets\\about\\desktop\\image-world-class-talent.jpg":[["image-world-class-talent.d8d5e473.jpg","assets/about/desktop/image-world-class-talent.jpg"],"assets/about/desktop/image-world-class-talent.jpg"],"./..\\..\\assets\\about\\desktop\\image-real-deal.jpg":[["image-real-deal.9ceb4811.jpg","assets/about/desktop/image-real-deal.jpg"],"assets/about/desktop/image-real-deal.jpg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -394,4 +394,4 @@ function hmrAcceptRun(bundle, id) {
   }
 }
 },{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/about.653aae4d.js.map
+//# sourceMappingURL=/contact.21f7e600.js.map

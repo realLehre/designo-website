@@ -1,0 +1,33 @@
+@use 'config' as c;
+@import 'shared';
+
+#locations-choice-container {
+  margin-top: 120px;
+}
+
+.locations-choice {
+  position: relative;
+  width: 90%;
+  height: auto;
+  max-width: 1400px;
+  margin-inline: auto;
+  @include c.flex;
+  z-index: 3;
+}
+
+.location-choice {
+  text-align: center;
+
+  &-content {
+    & .location-name {
+      text-transform: uppercase;
+      font-weight: map-get(c.$font-sizes, H2);
+      letter-spacing: 5px;
+      margin-bottom: 20px;
+    }
+
+    & a {
+      @include c.button_on_light;
+    }
+  }
+}
