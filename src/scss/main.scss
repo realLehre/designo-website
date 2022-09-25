@@ -1,69 +1,9 @@
 @use 'config' as c;
+@import 'shared';
 
 body {
   font-family: c.$font-family;
   background: c.$pri_white;
-}
-
-#header-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: c.$pri_white;
-  padding: 30px 0;
-  z-index: 10;
-}
-
-.header {
-  @include c.flex;
-  align-items: flex-start;
-  width: 90%;
-  max-width: 1400px;
-  margin-inline: auto;
-
-  & .logo {
-    width: 196px;
-
-    & img {
-      width: 100%;
-    }
-  }
-
-  & .links {
-    @include c.flex;
-
-    & .link {
-      &:not(:last-child) {
-        margin-right: 25px;
-      }
-
-      & a {
-        position: relative;
-        font-size: map-get(c.$font-sizes, links);
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        color: c.$sec_dark-grey;
-
-        &:after {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 0;
-          height: 1px;
-          background: c.$sec_dark-grey;
-          @include c.transition;
-        }
-
-        &:hover {
-          &:after {
-            width: 100%;
-          }
-        }
-      }
-    }
-  }
 }
 
 #hero-container {
@@ -97,7 +37,6 @@ body {
       font-size: map-get(c.$font-sizes, body);
       font-weight: c.$font-weight_regular;
       margin: 30px 0;
-      //   width: 445px;
     }
 
     & .hero-btn {
@@ -240,7 +179,7 @@ body {
         margin-bottom: 10px;
       }
 
-      & .link a {
+      & .link {
         color: c.$pri_white;
         text-transform: uppercase;
         letter-spacing: 5px;
@@ -277,172 +216,6 @@ body {
       text-transform: uppercase;
       letter-spacing: 5px;
       margin-bottom: 20px;
-    }
-  }
-}
-
-#cta-container {
-  margin-top: 50px;
-  transform: translateY(70px);
-}
-
-.cta {
-  width: 90%;
-  max-width: 1400px;
-  margin-inline: auto;
-  @include c.flex;
-  background: c.$pri_peach;
-  border-radius: 12px;
-  padding: 70px 70px;
-
-  &-content {
-    width: 40%;
-    color: c.$pri_white;
-
-    &-header {
-      font-size: map-get(c.$font-sizes, H2);
-      font-weight: c.$font-weight_medium;
-      line-height: 1;
-      margin-bottom: 20px;
-    }
-
-    &-copy {
-      font-size: map-get(c.$font-sizes, body);
-    }
-  }
-
-  &-btn {
-    & a {
-      @include c.button_on_dark;
-    }
-  }
-}
-
-footer {
-  background: c.$pri_black;
-  color: c.$pri_white;
-  padding: 130px 0px 40px;
-}
-
-.footer {
-  width: 90%;
-  max-width: 1400px;
-  margin-inline: auto;
-}
-
-.footer-top {
-  @include c.flex;
-  align-items: flex-start;
-  border-bottom: 1px solid c.$footer-border;
-  padding-bottom: 30px;
-
-  &-logo {
-    width: 157px;
-
-    & img {
-      width: 100%;
-    }
-  }
-
-  &-links-container .links {
-    @include c.flex;
-
-    & .link {
-      &:not(:last-child) {
-        margin-right: 25px;
-      }
-
-      & a {
-        position: relative;
-        font-size: map-get(c.$font-sizes, links);
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        color: c.$pri_white;
-
-        &:after {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 0;
-          height: 1px;
-          background: c.$sec_dark-grey;
-          @include c.transition;
-        }
-
-        &:hover {
-          &:after {
-            width: 100%;
-          }
-        }
-      }
-    }
-  }
-}
-
-.footer-bottom {
-  @include c.flex;
-  align-items: flex-end;
-  margin-top: 30px;
-
-  &-content {
-    @include c.flex;
-    font-size: map-get(c.$font-sizes, body);
-
-    & .address {
-      color: c.$footer-border;
-      font-weight: c.$font-weight_bold;
-      margin-right: 100px;
-      & span {
-        display: block;
-        font-weight: c.$font-weight_regular;
-      }
-    }
-
-    & .contact {
-      color: c.$footer-border;
-      font-weight: c.$font-weight_bold;
-      & span {
-        display: block;
-      }
-    }
-  }
-}
-
-.footer-bottom-socials {
-  @include c.flex;
-
-  & i {
-    font-size: 20px;
-    color: c.$pri_peach;
-    cursor: pointer;
-    @include c.transition;
-
-    &:hover {
-      color: c.$sec_light-peach;
-    }
-
-    &:not(:last-child) {
-      margin-right: 10px;
-    }
-
-    &.fa-youtube-play {
-      font-size: 13px;
-      color: c.$pri_black;
-      background: c.$pri_peach;
-      border-radius: 50%;
-      width: 17px;
-      height: 17px;
-      line-height: 17px;
-      padding: 10px;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      &:hover {
-        background: c.$sec_light-peach;
-      }
     }
   }
 }
