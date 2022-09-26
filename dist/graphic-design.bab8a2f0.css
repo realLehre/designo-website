@@ -46,6 +46,7 @@ body {
   background: #ffffff;
   padding: 30px 0;
   z-index: 10;
+  border-bottom: 2px solid red;
 }
 
 .header {
@@ -90,6 +91,13 @@ body {
 }
 .header .links .link a:hover:after {
   width: 100%;
+}
+.header .menu-icon {
+  display: none;
+}
+.header .menu-icon i {
+  font-size: 30px;
+  cursor: pointer;
 }
 
 .bg-pattern.pattern-1 {
@@ -324,6 +332,7 @@ body {
   background: #ffffff;
   padding: 30px 0;
   z-index: 10;
+  border-bottom: 2px solid red;
 }
 
 .header {
@@ -368,6 +377,13 @@ body {
 }
 .header .links .link a:hover:after {
   width: 100%;
+}
+.header .menu-icon {
+  display: none;
+}
+.header .menu-icon i {
+  font-size: 30px;
+  cursor: pointer;
 }
 
 .bg-pattern.pattern-1 {

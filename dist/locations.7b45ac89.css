@@ -43,6 +43,7 @@ body {
   background: #ffffff;
   padding: 30px 0;
   z-index: 10;
+  border-bottom: 2px solid red;
 }
 
 .header {
@@ -87,6 +88,13 @@ body {
 }
 .header .links .link a:hover:after {
   width: 100%;
+}
+.header .menu-icon {
+  display: none;
+}
+.header .menu-icon i {
+  font-size: 30px;
+  cursor: pointer;
 }
 
 .bg-pattern.pattern-1 {
@@ -409,6 +417,61 @@ a {
   }
   .bg-pattern {
     display: none;
+  }
+}
+@media (max-width: 600px) {
+  .header .links {
+    position: absolute;
+    top: 93px;
+    left: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    z-index: 5;
+  }
+  .header .links:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #1d1c1e;
+    opacity: 0.5;
+    z-index: 4;
+  }
+  .header .links .link {
+    position: relative;
+    background: #1d1c1e;
+    width: 100%;
+    padding: 20px 0;
+    padding-left: 30px;
+    z-index: 5;
+  }
+  .header .links .link:first-child {
+    padding-top: 50px;
+  }
+  .header .links .link:last-child {
+    padding-bottom: 50px;
+  }
+  .header .links .link:not(:last-child) {
+    margin-right: 0px;
+    margin-bottom: 0px;
+  }
+  .header .links .link a {
+    font-size: 25px;
+    color: #ffffff;
+  }
+  .header .links .link a:hover:after {
+    width: 0;
+  }
+  .header .menu-icon {
+    display: block;
+  }
+  .header .menu-icon i {
+    font-size: 30px;
+    cursor: pointer;
   }
 }
 
