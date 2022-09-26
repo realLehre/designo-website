@@ -1,0 +1,57 @@
+@media (max-width: 768px) {
+  .contact-hero {
+    flex-direction: column;
+
+    &-oval {
+      position: absolute;
+      left: -10%;
+      top: -10%;
+      width: 75%;
+    }
+
+    &-contents {
+      width: 100%;
+      margin-bottom: 50px;
+
+      & .contact-hero-header {
+        font-size: map-get(c.$font-sizes, H1);
+      }
+    }
+
+    &-form {
+      width: 100%;
+      margin-left: 0px;
+
+      & form {
+        width: 100%;
+        @include c.flex;
+        flex-direction: column;
+
+        & .form-group {
+          position: relative;
+          width: 100%;
+
+          &:not(:last-child) {
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  .locations-choice {
+    flex-direction: column;
+  }
+
+  .location-choice {
+    &:not(:last-child) {
+      margin-bottom: 70px;
+    }
+
+    &-content {
+      & .location-name {
+        font-weight: map-get(c.$font-sizes, H2);
+      }
+    }
+  }
+}

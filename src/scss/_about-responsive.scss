@@ -1,0 +1,93 @@
+@media (max-width: 768px) {
+  .about-hero {
+    flex-direction: column-reverse;
+    padding-left: 0px;
+    padding-bottom: 70px;
+
+    &-oval {
+      left: 0;
+      top: 10%;
+      width: 70%;
+    }
+
+    &-contents {
+      width: 80%;
+      margin-right: 0px;
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    &-img {
+      width: 100%;
+      height: 320px;
+      background-image: url('../../assets/about/tablet/image-about-hero.jpg');
+    }
+  }
+
+  .talent {
+    flex-direction: column;
+    padding-right: 0px;
+    padding-bottom: 70px;
+
+    &-img {
+      width: 100%;
+      height: 320px;
+      background-image: url('../../assets/about/tablet/image-world-class-talent.jpg');
+    }
+
+    &-contents {
+      margin-top: 50px;
+      margin-left: 0px;
+      text-align: center;
+    }
+  }
+
+  .locations-choice {
+    flex-direction: column;
+  }
+
+  .location-choice {
+    &:not(:last-child) {
+      margin-bottom: 70px;
+    }
+
+    &-content {
+      & .location-name {
+        font-weight: map-get(c.$font-sizes, H2);
+      }
+    }
+  }
+
+  .deal {
+    flex-direction: column-reverse;
+    padding-left: 0px;
+    padding-bottom: 70px;
+
+    &-contents {
+      margin-top: 50px;
+      margin-right: 0px;
+
+      & .deal-header {
+        font-size: map-get(c.$font-sizes, H2);
+      }
+    }
+
+    &-img {
+      width: 100%;
+      height: 320px;
+      background-image: url('../../assets/about/tablet/image-real-deal.jpg');
+    }
+
+    &-pattern {
+      position: absolute;
+      right: 10%;
+      bottom: -3%;
+      width: 60%;
+      z-index: 2;
+
+      & img {
+        width: 100%;
+      }
+    }
+  }
+}

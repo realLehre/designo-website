@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\..\\assets\\about\\desktop\\image-about-hero.jpg":[["image-about-hero.3f430a63.jpg","assets/about/desktop/image-about-hero.jpg"],"assets/about/desktop/image-about-hero.jpg"],"./..\\..\\assets\\about\\desktop\\image-world-class-talent.jpg":[["image-world-class-talent.d8d5e473.jpg","assets/about/desktop/image-world-class-talent.jpg"],"assets/about/desktop/image-world-class-talent.jpg"],"./..\\..\\assets\\about\\desktop\\image-real-deal.jpg":[["image-real-deal.9ceb4811.jpg","assets/about/desktop/image-real-deal.jpg"],"assets/about/desktop/image-real-deal.jpg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./..\\..\\assets\\about\\desktop\\image-about-hero.jpg":[["image-about-hero.3f430a63.jpg","assets/about/desktop/image-about-hero.jpg"],"assets/about/desktop/image-about-hero.jpg"],"./..\\..\\assets\\about\\desktop\\image-world-class-talent.jpg":[["image-world-class-talent.d8d5e473.jpg","assets/about/desktop/image-world-class-talent.jpg"],"assets/about/desktop/image-world-class-talent.jpg"],"./..\\..\\assets\\about\\desktop\\image-real-deal.jpg":[["image-real-deal.9ceb4811.jpg","assets/about/desktop/image-real-deal.jpg"],"assets/about/desktop/image-real-deal.jpg"],"./..\\..\\assets\\home\\desktop\\web-design-small.png":[["web-design-small.74f0f22c.png","assets/home/desktop/web-design-small.png"],"assets/home/desktop/web-design-small.png"],"./..\\..\\assets\\about\\tablet\\image-about-hero.jpg":[["image-about-hero.7df2a5b5.jpg","assets/about/tablet/image-about-hero.jpg"],"assets/about/tablet/image-about-hero.jpg"],"./..\\..\\assets\\about\\tablet\\image-world-class-talent.jpg":[["image-world-class-talent.3a375093.jpg","assets/about/tablet/image-world-class-talent.jpg"],"assets/about/tablet/image-world-class-talent.jpg"],"./..\\..\\assets\\about\\tablet\\image-real-deal.jpg":[["image-real-deal.b312c2e4.jpg","assets/about/tablet/image-real-deal.jpg"],"assets/about/tablet/image-real-deal.jpg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "2213" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "1123" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

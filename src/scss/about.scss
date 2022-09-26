@@ -50,11 +50,13 @@ body {
   }
 
   &-img {
+    position: relative;
     width: 80%;
     height: 470px;
     background-image: url('../../assets/about/desktop/image-about-hero.jpg');
     background-position: center;
     background-size: cover;
+    z-index: 3;
   }
 }
 
@@ -134,7 +136,33 @@ body {
 }
 
 .location-choice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+
+  &-img {
+    position: relative;
+    width: 202px;
+    margin-bottom: 40px;
+
+    & .location-pattern {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 3;
+      width: 100%;
+
+      &.pattern-1 {
+        transform: rotate(90deg);
+      }
+
+      &.pattern-3 {
+        transform: rotate(-90deg);
+      }
+    }
+  }
 
   &-content {
     & .location-name {
@@ -223,3 +251,6 @@ body {
   bottom: -70%;
   right: -30%;
 }
+
+@import 'main-responsive';
+@import 'about-responsive';
