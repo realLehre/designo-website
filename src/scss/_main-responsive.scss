@@ -275,8 +275,9 @@
     }
 
     &-oval {
-      right: 0px;
+      right: -60%;
       top: 45px;
+      width: 700px;
     }
 
     &-img {
@@ -286,14 +287,6 @@
   }
 
   .services {
-    grid-template-columns: auto;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas:
-      'web'
-      'app'
-      'graphic';
-    grid-gap: 20px;
-
     & .service {
       height: 200px;
       &:hover {

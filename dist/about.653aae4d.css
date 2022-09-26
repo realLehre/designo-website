@@ -769,18 +769,13 @@ a {
     z-index: 6;
   }
   .hero-oval {
-    right: 0px;
+    right: -60%;
     top: 45px;
+    width: 700px;
   }
   .hero-img {
     width: 300px;
     transform: translateY(5%);
-  }
-  .services {
-    grid-template-columns: auto;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: "web" "app" "graphic";
-    grid-gap: 20px;
   }
   .services .service {
     height: 200px;
