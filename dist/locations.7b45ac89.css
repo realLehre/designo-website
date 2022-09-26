@@ -428,7 +428,9 @@ a {
     align-items: flex-start;
     justify-content: flex-start;
     width: 100%;
+    transform: translateX(100%);
     z-index: 5;
+    transition: all 500ms ease-in-out;
   }
   .header .links:after {
     position: absolute;
@@ -440,14 +442,26 @@ a {
     background: #1d1c1e;
     opacity: 0.5;
     z-index: 4;
+    display: none;
+  }
+  .header .links.open {
+    transform: translateX(0);
+  }
+  .header .links.open:after {
+    display: block;
   }
   .header .links .link {
-    position: relative;
     background: #1d1c1e;
     width: 100%;
     padding: 20px 0;
     padding-left: 30px;
     z-index: 5;
+    transform: translateX(100%);
+    transition: all 500ms ease-in-out;
+    z-index: 5;
+  }
+  .header .links .link.open {
+    transform: translateX(0);
   }
   .header .links .link:first-child {
     padding-top: 50px;
@@ -457,7 +471,7 @@ a {
   }
   .header .links .link:not(:last-child) {
     margin-right: 0px;
-    margin-bottom: 0px;
+    margin-bottom: -10px;
   }
   .header .links .link a {
     font-size: 25px;
@@ -472,6 +486,171 @@ a {
   .header .menu-icon i {
     font-size: 30px;
     cursor: pointer;
+  }
+  .header .menu-icon i.fa-times {
+    display: none;
+  }
+  .header .menu-icon.open .fa-bars {
+    display: none;
+  }
+  .header .menu-icon.open .fa-times {
+    display: block;
+  }
+  #hero-container {
+    margin-top: 92px;
+    width: 100%;
+  }
+  .hero {
+    width: 100%;
+    border-radius: 0px;
+    height: 1100px;
+    padding-top: 120px;
+    z-index: 6;
+  }
+  .hero-contents {
+    margin-right: 0px;
+    text-align: center;
+    width: 90%;
+    margin-bottom: 50px;
+  }
+  .hero-contents .hero-header {
+    font-size: 32px;
+  }
+  .hero-contents .hero-copy {
+    font-size: 15px;
+    width: 100%;
+    margin-inline: auto;
+  }
+  .hero-contents .hero-btn {
+    position: relative;
+    display: block;
+    z-index: 6;
+  }
+  .hero-oval {
+    right: 0px;
+    top: 45px;
+  }
+  .hero-img {
+    width: 300px;
+    transform: translateY(5%);
+  }
+  .services {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "web" "app" "graphic";
+    grid-gap: 20px;
+  }
+  .services .service {
+    height: 200px;
+  }
+  .services .service.web {
+    background-image: url("/web-design-small.74f0f22c.png");
+  }
+  .services .service.web:after {
+    left: 0;
+    width: 0%;
+    height: 100%;
+  }
+  .services .service.web:hover:after {
+    width: 100%;
+  }
+  .services .service.app {
+    height: 200px;
+  }
+  .services .service.graphic {
+    height: 200px;
+  }
+  .services .service .content .service-type {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  .services .service .content .link {
+    font-size: 15px;
+  }
+  .values .value {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .values .value:not(:last-child) {
+    margin-right: 0px;
+    margin-bottom: 50px;
+  }
+  .values .value-content {
+    width: 100%;
+    text-align: center;
+    margin-left: 0px;
+    margin-top: 40px;
+  }
+  .values .value-content .value-heading {
+    margin-bottom: 10px;
+  }
+  .cta {
+    padding: 70px 40px;
+  }
+  .cta-content {
+    width: 100%;
+  }
+  .cta-content-header {
+    font-size: 32px;
+  }
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom: none;
+    padding-bottom: 30px;
+  }
+  .footer-top-logo {
+    width: 157px;
+  }
+  .footer-top-logo img {
+    width: 100%;
+  }
+  .footer-top-links-container {
+    border-top: 1px solid #979797;
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+  .footer-top-links-container .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-top-links-container .links .link:not(:last-child) {
+    margin-right: 0px;
+    margin-bottom: 30px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-bottom-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-bottom-content .address {
+    margin-right: 0px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .footer-bottom-content .contact {
+    text-align: center;
+  }
+  .footer-bottom-socials {
+    margin-top: 40px;
+  }
+  .bg-pattern {
+    display: none;
   }
 }
 
