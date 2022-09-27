@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@200;300;400;500;600;700&family=Jost:wght@300;400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@200;300;400;500;600;700&family=Jost:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@200;300;400;500;600;700&family=Jost:wght@300;400;500;600&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -12,76 +13,6 @@ li {
 
 a {
   text-decoration: none;
-}
-
-body {
-  font-family: "Jost", sans-serif;
-  background: #ffffff;
-  overflow-x: hidden;
-  min-width: 100%;
-}
-
-#header-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 94.5px;
-  background: #ffffff;
-  padding: 30px 0;
-  z-index: 10;
-  border-bottom: 1px solid #1d1c1e;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  align-items: flex-start;
-  width: 90%;
-  max-width: 1400px;
-  margin-inline: auto;
-}
-.header .logo {
-  width: 196px;
-}
-.header .logo img {
-  width: 100%;
-}
-.header .links {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.header .links .link:not(:last-child) {
-  margin-right: 25px;
-}
-.header .links .link a {
-  position: relative;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #333136;
-}
-.header .links .link a:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background: #333136;
-  transition: all 500ms ease-in-out;
-}
-.header .links .link a:hover:after {
-  width: 100%;
-}
-.header .menu-icon {
-  display: none;
-}
-.header .menu-icon i {
-  font-size: 30px;
-  cursor: pointer;
 }
 
 .bg-pattern.pattern-1 {
@@ -324,6 +255,96 @@ body {
   margin-bottom: 20px;
 }
 
+.bg-pattern.pattern-2 {
+  position: absolute;
+  bottom: -90%;
+  right: -20%;
+  z-index: 1;
+}
+
+.bg-pattern.pattern-1,
+.bg-pattern.pattern-2 {
+  display: none;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  background: #ffffff;
+  overflow-x: hidden;
+  min-width: 100%;
+}
+
+#header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 94.5px;
+  background: #ffffff;
+  padding: 30px 0;
+  z-index: 10;
+}
+#header-container.shadow {
+  box-shadow: -1px -1px 6px #1d1c1e;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: flex-start;
+  width: 90%;
+  max-width: 1400px;
+  margin-inline: auto;
+}
+.header .logo {
+  width: 196px;
+}
+.header .logo img {
+  width: 100%;
+}
+.header .links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .links .link:not(:last-child) {
+  margin-right: 25px;
+}
+.header .links .link a {
+  position: relative;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #333136;
+}
+.header .links .link a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #333136;
+  transition: all 500ms ease-in-out;
+}
+.header .links .link a:hover:after {
+  width: 100%;
+}
+.header .menu-icon {
+  display: none;
+}
+.header .menu-icon i {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.bg-pattern.pattern-1 {
+  position: absolute;
+  top: 600px;
+  z-index: 1;
+}
+
 #cta-container {
   position: relative;
   width: 90%;
@@ -509,13 +530,6 @@ footer {
   background: #ffad9b;
 }
 
-.bg-pattern.pattern-2 {
-  position: absolute;
-  bottom: -90%;
-  right: -20%;
-  z-index: 1;
-}
-
 .bg-pattern.pattern-1,
 .bg-pattern.pattern-2 {
   display: none;
@@ -643,6 +657,16 @@ footer {
   #header-container {
     padding: 20px 0;
     height: auto;
+  }
+  .header {
+    align-items: flex-end;
+  }
+  .header .logo {
+    width: 150px;
+    transform: translateY(2px);
+  }
+  .header .logo img {
+    width: 100%;
   }
   .header .links {
     position: absolute;

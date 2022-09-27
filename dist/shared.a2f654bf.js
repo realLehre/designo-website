@@ -118,6 +118,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"shared.js":[function(require,module,exports) {
+var headerContainer = document.getElementById('header-container');
 var linkContainer = document.querySelector('.links');
 var link = document.querySelectorAll('.link');
 var menuIcon = document.querySelector('.menu-icon');
@@ -130,6 +131,14 @@ menuIcon.addEventListener('click', function () {
       item.classList.toggle('open');
     }, time);
   });
+});
+console.log(window.scrollY);
+window.addEventListener('scroll', function () {
+  if (window.scrollY > 20) {
+    headerContainer.classList.add('shadow');
+  } else {
+    headerContainer.classList.remove('shadow');
+  }
 });
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];

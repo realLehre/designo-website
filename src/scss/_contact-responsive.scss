@@ -97,6 +97,16 @@
   }
 
   .header {
+    align-items: flex-end;
+
+    & .logo {
+      width: 150px;
+      transform: translateY(2px);
+
+      & img {
+        width: 100%;
+      }
+    }
     & .links {
       position: absolute;
       top: 73.2px;

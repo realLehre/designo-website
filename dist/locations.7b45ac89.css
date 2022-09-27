@@ -31,7 +31,9 @@ body {
   background: #ffffff;
   padding: 30px 0;
   z-index: 10;
-  border-bottom: 1px solid #1d1c1e;
+}
+#header-container.shadow {
+  box-shadow: -1px -1px 6px #1d1c1e;
 }
 
 .header {
@@ -276,6 +278,11 @@ footer {
   background: #ffad9b;
 }
 
+.bg-pattern.pattern-1,
+.bg-pattern.pattern-2 {
+  display: none;
+}
+
 #locations-container {
   margin-top: 130px;
 }
@@ -428,6 +435,16 @@ footer {
   #header-container {
     padding: 20px 0;
     height: auto;
+  }
+  .header {
+    align-items: flex-end;
+  }
+  .header .logo {
+    width: 150px;
+    transform: translateY(2px);
+  }
+  .header .logo img {
+    width: 100%;
   }
   .header .links {
     position: absolute;

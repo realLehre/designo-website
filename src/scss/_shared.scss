@@ -16,7 +16,10 @@ body {
   background: c.$pri_white;
   padding: 30px 0;
   z-index: 10;
-  border-bottom: 1px solid c.$pri_black;
+
+  &.shadow {
+    box-shadow: -1px -1px 6px c.$pri_black;
+  }
 }
 
 .header {
@@ -265,4 +268,9 @@ footer {
       }
     }
   }
+}
+
+.bg-pattern.pattern-1,
+.bg-pattern.pattern-2 {
+  display: none;
 }
