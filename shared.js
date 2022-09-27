@@ -14,8 +14,6 @@ menuIcon.addEventListener('click', () => {
   });
 });
 
-console.log(window.scrollY);
-
 window.addEventListener('scroll', () => {
   if (window.scrollY > 20) {
     headerContainer.classList.add('shadow');

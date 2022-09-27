@@ -117,27 +117,22 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"shared.js":[function(require,module,exports) {
-var headerContainer = document.getElementById('header-container');
-var linkContainer = document.querySelector('.links');
-var link = document.querySelectorAll('.link');
-var menuIcon = document.querySelector('.menu-icon');
-menuIcon.addEventListener('click', function () {
-  menuIcon.classList.toggle('open');
-  linkContainer.classList.toggle('open');
-  link.forEach(function (item, index) {
-    var time = index * 200;
-    setTimeout(function () {
-      item.classList.toggle('open');
-    }, time);
+})({"contact.js":[function(require,module,exports) {
+var inputs = document.querySelectorAll('input');
+var labels = document.querySelectorAll('label');
+var form = document.querySelector('form');
+form.addEventListener('click', function (e) {
+  e.preventDefault();
+  inputs.forEach(function (input, index) {
+    input.addEventListener('click', function () {
+      if (input.value !== '') {
+        labels[index].classList.add('up');
+      } else {
+        labels[index].classList.remove('up');
+      }
+    });
+    console.log(input.value);
   });
-});
-window.addEventListener('scroll', function () {
-  if (window.scrollY > 20) {
-    headerContainer.classList.add('shadow');
-  } else {
-    headerContainer.classList.remove('shadow');
-  }
 });
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -343,5 +338,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","shared.js"], null)
-//# sourceMappingURL=/shared.a2f654bf.js.map
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","contact.js"], null)
+//# sourceMappingURL=/contact.f5e4e815.js.map

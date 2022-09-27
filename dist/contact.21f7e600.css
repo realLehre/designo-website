@@ -89,6 +89,10 @@ html {
   font-size: 15px;
   padding-left: 20px;
   transform: translateY(50%);
+  transition: all 300ms ease-in-out;
+}
+.contact-hero-form form .form-group label.up {
+  transform: translateY(0%);
 }
 .contact-hero-form form .form-group input, .contact-hero-form form .form-group textarea {
   width: 100%;
@@ -571,7 +575,7 @@ footer {
   }
   .header .links {
     position: absolute;
-    top: 73.2px;
+    top: 68px;
     left: 0;
     flex-direction: column;
     align-items: flex-start;
