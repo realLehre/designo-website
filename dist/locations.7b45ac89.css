@@ -356,6 +356,9 @@ footer {
 }
 
 @media (max-width: 768px) {
+  #locations-container {
+    margin-top: 94.5px;
+  }
   .location {
     flex-direction: column-reverse;
     width: 100%;
@@ -422,9 +425,13 @@ footer {
   }
 }
 @media (max-width: 600px) {
+  #header-container {
+    padding: 20px 0;
+    height: auto;
+  }
   .header .links {
     position: absolute;
-    top: 93px;
+    top: 73.2px;
     left: 0;
     flex-direction: column;
     align-items: flex-start;
@@ -498,6 +505,9 @@ footer {
   .header .menu-icon.open .fa-times {
     display: block;
   }
+  #locations-container {
+    margin-top: 73.2px;
+  }
   .locations {
     width: 100%;
   }
@@ -517,6 +527,7 @@ footer {
     margin-right: 0;
     margin-top: 0px;
     text-align: center;
+    border-radius: 0;
   }
   .location-content-header {
     font-size: 32px;
@@ -551,6 +562,7 @@ footer {
     height: 297px;
     border-radius: 12px;
     overflow: hidden;
+    border-radius: 0;
   }
   .location-map img {
     height: 100%;

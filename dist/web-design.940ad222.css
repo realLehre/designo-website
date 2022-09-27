@@ -604,7 +604,7 @@ footer {
 @media (max-width: 600px) {
   .header .links {
     position: absolute;
-    top: 93px;
+    top: 73.2px;
     left: 0;
     flex-direction: column;
     align-items: flex-start;

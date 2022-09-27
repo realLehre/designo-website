@@ -143,10 +143,15 @@
 }
 
 @media (max-width: 600px) {
+  #header-container {
+    padding: 20px 0;
+    height: auto;
+  }
+
   .header {
     & .links {
       position: absolute;
-      top: 93px;
+      top: 73.2px;
       left: 0;
       flex-direction: column;
       align-items: flex-start;
@@ -240,7 +245,7 @@
   }
 
   #hero-container {
-    margin-top: 92px;
+    margin-top: 73.2px;
     width: 100%;
   }
 

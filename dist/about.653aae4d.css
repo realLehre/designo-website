@@ -239,7 +239,7 @@ body {
 }
 .location-choice-content .location-name {
   text-transform: uppercase;
-  font-size: 40px;
+  font-size: 20px;
   letter-spacing: 5px;
   margin-bottom: 20px;
 }
@@ -634,9 +634,13 @@ footer {
   }
 }
 @media (max-width: 600px) {
+  #header-container {
+    padding: 20px 0;
+    height: auto;
+  }
   .header .links {
     position: absolute;
-    top: 93px;
+    top: 73.2px;
     left: 0;
     flex-direction: column;
     align-items: flex-start;
@@ -711,7 +715,7 @@ footer {
     display: block;
   }
   #about-hero-container {
-    margin-top: 94.5px;
+    margin-top: 73.2px;
   }
   .about-hero {
     width: 100%;

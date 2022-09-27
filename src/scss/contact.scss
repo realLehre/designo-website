@@ -252,7 +252,7 @@ section {
   &-content {
     & .location-name {
       text-transform: uppercase;
-      font-weight: map-get(c.$font-sizes, H2);
+      font-size: map-get(c.$font-sizes, H3);
       letter-spacing: 5px;
       margin-bottom: 20px;
     }
