@@ -783,6 +783,9 @@ footer {
   .services .service .content .link {
     font-size: 15px;
   }
+  .services .service .content .link i {
+    font-size: 18px;
+  }
   .values .value {
     flex-direction: column;
     justify-content: center;

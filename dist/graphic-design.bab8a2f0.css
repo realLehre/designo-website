@@ -746,6 +746,16 @@ footer {
   .services .service:hover:after {
     display: none;
   }
+  .services .service .content .service-type {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  .services .service .content .link {
+    font-size: 15px;
+  }
+  .services .service .content .link i {
+    font-size: 18px;
+  }
   .cta {
     padding: 70px 40px;
   }
@@ -1088,6 +1098,16 @@ footer {
   }
   .services .service:hover:after {
     display: none;
+  }
+  .services .service .content .service-type {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  .services .service .content .link {
+    font-size: 15px;
+  }
+  .services .service .content .link i {
+    font-size: 18px;
   }
   .cta {
     padding: 70px 40px;
