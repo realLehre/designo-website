@@ -516,6 +516,11 @@ footer {
   z-index: 1;
 }
 
+.bg-pattern.pattern-1,
+.bg-pattern.pattern-2 {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .hero {
     display: flex;
