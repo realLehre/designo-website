@@ -9,6 +9,17 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css"
+      integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
+      integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s="
+      crossorigin=""
+    ></script>
     <title>About</title>
   </head>
   <body>
@@ -34,6 +45,97 @@
         </div>
       </div>
     </header>
+
+    <section id="locations-container">
+      <div class="locations">
+        <div class="location">
+          <div class="location-content">
+            <h2 class="location-content-header">Canada</h2>
+
+            <div class="location-content-address">
+              <div class="address address-1">
+                Designo Central Office <span>3886 Wellington Street</span>
+                <span>Toronto, Ontario M9C 3J5</span>
+              </div>
+
+              <div class="address address-2">
+                Contact <span>P : +1 253-863-8967</span>
+                <span>M : contact@designo.co</span>
+              </div>
+            </div>
+
+            <div class="location-content-pattern">
+              <img
+                src="./assets/shared/desktop/bg-pattern-two-circles.svg"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div class="location-map">
+            <div id="canada-map"></div>
+          </div>
+        </div>
+
+        <div class="location location-au">
+          <div class="location-content">
+            <h2 class="location-content-header">Australia</h2>
+
+            <div class="location-content-address">
+              <div class="address address-1">
+                Designo AU Office <span>19 Balonne Street</span>
+                <span>New South Wales 2443</span>
+              </div>
+
+              <div class="address address-2">
+                Contact <span>P : (02) 6720 9092</span>
+                <span>M : contact@designo.au</span>
+              </div>
+            </div>
+
+            <div class="location-content-pattern">
+              <img
+                src="./assets/shared/desktop/bg-pattern-two-circles.svg"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div class="location-map au-map">
+            <div id="au-map"></div>
+          </div>
+        </div>
+
+        <div class="location">
+          <div class="location-content">
+            <h2 class="location-content-header">United Kingdom</h2>
+
+            <div class="location-content-address">
+              <div class="address address-1">
+                Designo UK Office <span>13 Colorado Way</span>
+                <span>Rhyd-y-fro SA8 9GA</span>
+              </div>
+
+              <div class="address address-2">
+                Contact <span>P : 078 3115 1400</span>
+                <span>M : contact@designo.uk</span>
+              </div>
+            </div>
+
+            <div class="location-content-pattern">
+              <img
+                src="./assets/shared/desktop/bg-pattern-two-circles.svg"
+                alt=""
+              />
+            </div>
+          </div>
+
+          <div class="location-map uk-map">
+            <div id="uk-map"></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section id="cta-container">
       <div class="cta-pattern">
@@ -100,5 +202,6 @@
     </footer>
 
     <script src="shared.js"></script>
+    <script src="locations.js"></script>
   </body>
 </html>

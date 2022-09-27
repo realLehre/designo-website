@@ -276,80 +276,107 @@ footer {
   background: #ffad9b;
 }
 
+#locations-container {
+  margin-top: 130px;
+}
+
+.locations {
+  width: 90%;
+  max-width: 1400px;
+  margin-inline: auto;
+}
+
+.location {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.location.location-au {
+  flex-direction: row-reverse;
+}
+.location:not(:last-child) {
+  margin-bottom: 30px;
+}
+.location-content {
+  position: relative;
+  background: #fdf3f0;
+  width: 60%;
+  height: 100%;
+  margin-right: 20px;
+  padding: 80px 60px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.location-content-header {
+  position: relative;
+  font-size: 40px;
+  color: #e7816b;
+  margin-bottom: 10px;
+  z-index: 3;
+}
+.location-content-address {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  z-index: 3;
+}
+.location-content-address .address {
+  font-size: 16px;
+  font-weight: 600;
+}
+.location-content-address .address span {
+  display: block;
+  font-weight: 500;
+  color: #333136;
+}
+.location-content-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.location.location-au .location-content {
+  margin-right: 0;
+  margin-left: 20px;
+}
+.location-map {
+  height: 297px;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 40%;
+}
+.location-map #canada-map, .location-map #au-map, .location-map #uk-map {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+}
+
 @media (max-width: 768px) {
-  .hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    padding-bottom: 0;
-    height: 843px;
-  }
-  .hero-contents {
-    margin-right: 0px;
-    text-align: center;
-  }
-  .hero-contents .hero-header {
-    font-size: 48px;
-  }
-  .hero-contents .hero-copy {
-    width: 70%;
-    margin-inline: auto;
-  }
-  .hero-oval {
-    right: -30px;
-    top: 45px;
-  }
-  .hero-img {
-    width: 300px;
-    transform: translateY(5%);
-  }
-  .services {
-    grid-template-columns: auto;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: "web" "app" "graphic";
-    grid-gap: 20px;
-  }
-  .services .service {
-    height: 200px;
-  }
-  .services .service.web {
-    background-image: url("/web-design-small.74f0f22c.png");
-  }
-  .services .service.web:after {
-    left: 0;
-    width: 0%;
-    height: 100%;
-  }
-  .services .service.web:hover:after {
+  .location {
+    flex-direction: column-reverse;
     width: 100%;
   }
-  .services .service.app {
-    height: 200px;
+  .location.location-au {
+    flex-direction: column-reverse;
   }
-  .services .service.graphic {
-    height: 200px;
+  .location-content {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 20px;
   }
-  #values-container {
-    margin-top: 80px;
+  .location-map {
+    height: 297px;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
   }
-  .values {
-    flex-direction: column;
-  }
-  .values .value {
-    flex-direction: row;
-  }
-  .values .value:not(:last-child) {
-    margin-right: 0px;
-    margin-bottom: 50px;
-  }
-  .values .value-content {
-    width: 70%;
-    text-align: left;
-    margin-left: 30px;
-  }
-  .values .value-content .value-heading {
-    margin-bottom: 10px;
+  .location-map #canada-map {
+    height: 100%;
+    width: 100%;
   }
   .cta {
     flex-direction: column;
@@ -471,103 +498,68 @@ footer {
   .header .menu-icon.open .fa-times {
     display: block;
   }
-  #hero-container {
-    margin-top: 92px;
+  .locations {
     width: 100%;
   }
-  .hero {
-    width: 100%;
-    border-radius: 0px;
-    height: 1100px;
-    padding-top: 120px;
-    padding-left: 0;
-    padding-right: 0;
-    z-index: 6;
+  .location {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-  .hero-contents {
-    margin-right: 0px;
+  .location.location-au {
+    flex-direction: column-reverse;
+  }
+  .location:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .location-content {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 20px;
     text-align: center;
-    width: 90%;
-    margin-bottom: 50px;
   }
-  .hero-contents .hero-header {
+  .location-content-header {
     font-size: 32px;
   }
-  .hero-contents .hero-copy {
-    font-size: 15px;
-    width: 100%;
-    margin-inline: auto;
-  }
-  .hero-contents .hero-btn {
-    position: relative;
-    display: block;
-    z-index: 6;
-  }
-  .hero-oval {
-    right: -60%;
-    top: 45px;
-    width: 700px;
-  }
-  .hero-img {
-    width: 300px;
-    transform: translateY(5%);
-  }
-  .services .service {
-    height: 200px;
-  }
-  .services .service:hover:after {
-    display: none;
-  }
-  .services .service.web {
-    background-image: url("/web-design-small.74f0f22c.png");
-  }
-  .services .service.web:after {
-    left: 0;
-    width: 0%;
-    height: 100%;
-  }
-  .services .service.web:hover:after {
-    width: 100%;
-  }
-  .services .service.app {
-    height: 200px;
-  }
-  .services .service.graphic {
-    height: 200px;
-  }
-  .services .service .content .service-type {
-    font-size: 28px;
-    margin-bottom: 10px;
-  }
-  .services .service .content .link {
-    font-size: 15px;
-  }
-  .services .service .content .link i {
-    font-size: 18px;
-  }
-  .values .value {
+  .location-content-address {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .values .value:not(:last-child) {
-    margin-right: 0px;
-    margin-bottom: 50px;
+  .location-content-address .address {
+    font-size: 15px;
   }
-  .values .value-content {
+  .location-content-address .address span {
+    display: block;
+    font-weight: 500;
+    color: #333136;
+  }
+  .location-content-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+  }
+  .location-content-pattern img {
     width: 100%;
-    text-align: center;
-    margin-left: 0px;
-    margin-top: 40px;
   }
-  .values .value-content .value-heading {
-    margin-bottom: 10px;
+  .location.location-au .location-content {
+    margin-right: 0;
+    margin-left: 0px;
+  }
+  .location-map {
+    height: 297px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .location-map img {
+    height: 100%;
   }
   .cta {
-    padding: 70px 0px;
+    padding: 70px 40px;
   }
   .cta-content {
-    width: 80%;
+    width: 100%;
   }
   .cta-content-header {
     font-size: 32px;

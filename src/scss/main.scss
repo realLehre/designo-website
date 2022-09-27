@@ -1,4 +1,8 @@
 @use 'config' as c;
+html {
+  position: relative;
+  overflow-x: hidden;
+}
 @import 'reset';
 @import 'shared';
 @import 'home';

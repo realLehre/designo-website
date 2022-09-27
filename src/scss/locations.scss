@@ -2,4 +2,92 @@
 @import 'reset';
 @import 'shared';
 
-@import 'main-responsive';
+#locations-container {
+  margin-top: 130px;
+}
+
+.locations {
+  width: 90%;
+  max-width: 1400px;
+  margin-inline: auto;
+}
+
+.location {
+  @include c.flex;
+
+  &.location-au {
+    flex-direction: row-reverse;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &-content {
+    position: relative;
+    background: c.$core-bg;
+    width: 60%;
+    height: 100%;
+    margin-right: 20px;
+    padding: 80px 60px;
+    border-radius: 12px;
+    overflow: hidden;
+
+    &-header {
+      position: relative;
+      font-size: map-get(c.$font-sizes, H2);
+      color: c.$pri_peach;
+      margin-bottom: 10px;
+      z-index: 3;
+    }
+
+    &-address {
+      position: relative;
+      @include c.flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      z-index: 3;
+
+      & .address {
+        font-size: map-get(c.$font-sizes, body);
+        font-weight: c.$font-weight_bold;
+
+        & span {
+          display: block;
+          font-weight: c.$font-weight_medium;
+          color: c.$sec_dark-grey;
+        }
+      }
+    }
+
+    &-pattern {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+  }
+
+  &.location-au .location-content {
+    margin-right: 0;
+    margin-left: 20px;
+  }
+
+  &-map {
+    height: 297px;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 40%;
+
+    & #canada-map,
+    & #au-map,
+    & #uk-map {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      z-index: 5;
+    }
+  }
+}
+
+@import 'locations-responsive';
