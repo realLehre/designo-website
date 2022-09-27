@@ -249,12 +249,14 @@
     border-radius: 0px;
     height: 1100px;
     padding-top: 120px;
+    padding-left: 0;
+    padding-right: 0;
     z-index: 6;
 
     &-contents {
       margin-right: 0px;
       text-align: center;
-      width: 100%;
+      width: 90%;
       margin-bottom: 50px;
 
       & .hero-header {
@@ -291,6 +293,7 @@
       height: 200px;
       &:hover {
         &:after {
+          display: none;
         }
       }
 
@@ -356,10 +359,10 @@
   }
 
   .cta {
-    padding: 70px 40px;
+    padding: 70px 0px;
 
     &-content {
-      width: 100%;
+      width: 80%;
 
       &-header {
         font-size: 32px;

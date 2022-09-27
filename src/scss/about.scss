@@ -317,6 +317,7 @@ footer {
     background-image: url('../../assets/about/desktop/image-about-hero.jpg');
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
     z-index: 3;
   }
 }
@@ -428,7 +429,7 @@ footer {
   &-content {
     & .location-name {
       text-transform: uppercase;
-      font-weight: map-get(c.$font-sizes, H2);
+      font-size: map-get(c.$font-sizes, H2);
       letter-spacing: 5px;
       margin-bottom: 20px;
     }

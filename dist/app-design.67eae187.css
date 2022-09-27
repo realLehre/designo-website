@@ -33,7 +33,7 @@ body {
   background: #ffffff;
   padding: 30px 0;
   z-index: 10;
-  border-bottom: 2px solid red;
+  border-bottom: 1px solid #1d1c1e;
 }
 
 .header {
@@ -479,14 +479,14 @@ footer {
     flex-direction: column;
     height: auto;
   }
-  .hero-contents {
+  .hero-content {
     margin-right: 0px;
     text-align: center;
   }
-  .hero-contents .hero-header {
+  .hero-content-header {
     font-size: 48px;
   }
-  .hero-contents .hero-copy {
+  .hero-content-copy {
     width: 70%;
     margin-inline: auto;
   }
@@ -674,6 +674,28 @@ footer {
   .header .menu-icon.open .fa-times {
     display: block;
   }
+  #hero-container {
+    width: 100%;
+    margin-top: 94.5px;
+  }
+  .hero {
+    border-radius: 0;
+    padding: 70px 0px;
+  }
+  .hero-content {
+    margin-right: 0px;
+    text-align: center;
+  }
+  .hero-content-header {
+    font-size: 32px;
+  }
+  .hero-content-copy {
+    width: 90%;
+    margin-inline: auto;
+  }
+  .hero-pattern {
+    right: -20%;
+  }
   .cores {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(4, 1fr);
@@ -703,6 +725,13 @@ footer {
     width: 80%;
     border-radius: 0 0 12px 12px;
   }
+  .core-content:hover {
+    background: #fdf3f0;
+    color: #1d1c1e;
+  }
+  .core-content:hover .core-content-header {
+    color: #e7816b;
+  }
   .core-content-header {
     font-size: 20px;
     font-weight: 500;
@@ -710,6 +739,12 @@ footer {
   }
   .core-content-copy {
     font-size: 16px;
+  }
+  .services .service {
+    height: 250px;
+  }
+  .services .service:hover:after {
+    display: none;
   }
   .cta {
     padding: 70px 40px;
@@ -787,14 +822,14 @@ footer {
     flex-direction: column;
     height: auto;
   }
-  .hero-contents {
+  .hero-content {
     margin-right: 0px;
     text-align: center;
   }
-  .hero-contents .hero-header {
+  .hero-content-header {
     font-size: 48px;
   }
-  .hero-contents .hero-copy {
+  .hero-content-copy {
     width: 70%;
     margin-inline: auto;
   }
@@ -982,6 +1017,28 @@ footer {
   .header .menu-icon.open .fa-times {
     display: block;
   }
+  #hero-container {
+    width: 100%;
+    margin-top: 94.5px;
+  }
+  .hero {
+    border-radius: 0;
+    padding: 70px 0px;
+  }
+  .hero-content {
+    margin-right: 0px;
+    text-align: center;
+  }
+  .hero-content-header {
+    font-size: 32px;
+  }
+  .hero-content-copy {
+    width: 90%;
+    margin-inline: auto;
+  }
+  .hero-pattern {
+    right: -20%;
+  }
   .cores {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(4, 1fr);
@@ -1011,6 +1068,13 @@ footer {
     width: 80%;
     border-radius: 0 0 12px 12px;
   }
+  .core-content:hover {
+    background: #fdf3f0;
+    color: #1d1c1e;
+  }
+  .core-content:hover .core-content-header {
+    color: #e7816b;
+  }
   .core-content-header {
     font-size: 20px;
     font-weight: 500;
@@ -1018,6 +1082,12 @@ footer {
   }
   .core-content-copy {
     font-size: 16px;
+  }
+  .services .service {
+    height: 250px;
+  }
+  .services .service:hover:after {
+    display: none;
   }
   .cta {
     padding: 70px 40px;

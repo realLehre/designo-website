@@ -298,6 +298,11 @@ footer {
 
     & img {
       width: 100%;
+
+      &.mobile-bg {
+        width: 100%;
+        display: none;
+      }
     }
   }
 

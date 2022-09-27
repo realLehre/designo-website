@@ -6,15 +6,15 @@
     flex-direction: column;
     height: auto;
 
-    &-contents {
+    &-content {
       margin-right: 0px;
       text-align: center;
 
-      & .hero-header {
+      &-header {
         font-size: map-get(c.$font-sizes, H1);
       }
 
-      & .hero-copy {
+      &-copy {
         width: 70%;
         margin-inline: auto;
       }
@@ -241,6 +241,34 @@
     }
   }
 
+  #hero-container {
+    width: 100%;
+    margin-top: 94.5px;
+  }
+
+  .hero {
+    border-radius: 0;
+    padding: 70px 0px;
+
+    &-content {
+      margin-right: 0px;
+      text-align: center;
+
+      &-header {
+        font-size: 32px;
+      }
+
+      &-copy {
+        width: 90%;
+        margin-inline: auto;
+      }
+    }
+  }
+
+  .hero-pattern {
+    right: -20%;
+  }
+
   .cores {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(4, 1fr);
@@ -272,6 +300,14 @@
       width: 80%;
       border-radius: 0 0 12px 12px;
 
+      &:hover {
+        background: c.$core-bg;
+        color: c.$pri_black;
+        & .core-content-header {
+          color: c.$pri_peach;
+        }
+      }
+
       &-header {
         font-size: map-get(c.$font-sizes, H3);
         font-weight: c.$font-weight_medium;
@@ -280,6 +316,17 @@
 
       &-copy {
         font-size: map-get(c.$font-sizes, body);
+      }
+    }
+  }
+
+  .services {
+    & .service {
+      height: 250px;
+      &:hover {
+        &:after {
+          display: none;
+        }
       }
     }
   }

@@ -193,6 +193,66 @@
     }
   }
 
+  #contact-hero-container {
+    margin-top: 94.5px;
+  }
+
+  .contact-hero {
+    flex-direction: column;
+    width: 100%;
+    border-radius: 0;
+    padding: 50px 0px;
+
+    &-oval {
+      position: absolute;
+      left: -20%;
+      top: 0;
+      width: 200%;
+
+      & img {
+        display: none;
+
+        &.mobile-bg {
+          width: 100%;
+          display: block;
+        }
+      }
+    }
+
+    &-contents {
+      width: 90%;
+      margin-bottom: 50px;
+      text-align: center;
+
+      & .contact-hero-header {
+        font-size: 32px;
+      }
+    }
+
+    &-form {
+      width: 90%;
+      margin-left: 0px;
+
+      & form {
+        & button {
+          align-self: center;
+        }
+      }
+    }
+  }
+
+  .location-choice {
+    &:not(:last-child) {
+      margin-bottom: 70px;
+    }
+
+    &-content {
+      & .location-name {
+        font-size: 20px;
+      }
+    }
+  }
+
   .cta {
     padding: 70px 40px;
 

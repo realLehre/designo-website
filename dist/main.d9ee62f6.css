@@ -31,7 +31,7 @@ body {
   background: #ffffff;
   padding: 30px 0;
   z-index: 10;
-  border-bottom: 2px solid red;
+  border-bottom: 1px solid #1d1c1e;
 }
 
 .header {
@@ -721,12 +721,14 @@ footer {
     border-radius: 0px;
     height: 1100px;
     padding-top: 120px;
+    padding-left: 0;
+    padding-right: 0;
     z-index: 6;
   }
   .hero-contents {
     margin-right: 0px;
     text-align: center;
-    width: 100%;
+    width: 90%;
     margin-bottom: 50px;
   }
   .hero-contents .hero-header {
@@ -753,6 +755,9 @@ footer {
   }
   .services .service {
     height: 200px;
+  }
+  .services .service:hover:after {
+    display: none;
   }
   .services .service.web {
     background-image: url("/web-design-small.74f0f22c.png");
@@ -797,10 +802,10 @@ footer {
     margin-bottom: 10px;
   }
   .cta {
-    padding: 70px 40px;
+    padding: 70px 0px;
   }
   .cta-content {
-    width: 100%;
+    width: 80%;
   }
   .cta-content-header {
     font-size: 32px;
