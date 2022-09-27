@@ -1,20 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@200;300;400;500;600;700&family=Jost:wght@300;400;500;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@200;300;400;500;600;700&family=Jost:wght@300;400;500;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@200;300;400;500;600;700&family=Jost:wght@300;400;500;600&display=swap");
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -33,6 +17,11 @@ body {
   font-family: "Jost", sans-serif;
   background: #ffffff;
   overflow-x: hidden;
+  width: 100%;
+}
+
+section {
+  width: 100%;
 }
 
 #header-container {
@@ -40,6 +29,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  height: 94.5px;
   background: #ffffff;
   padding: 30px 0;
   z-index: 10;
@@ -171,6 +161,7 @@ footer {
   color: #ffffff;
   padding: 130px 0px 40px;
   z-index: 3;
+  width: 100vw;
 }
 
 .footer {
@@ -285,10 +276,6 @@ footer {
 }
 .footer-bottom-socials i.fa-youtube-play:hover {
   background: #ffad9b;
-}
-
-body {
-  position: relative;
 }
 
 #contact-hero-container {
@@ -478,94 +465,49 @@ body {
   right: -30%;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
 @media (max-width: 768px) {
-  .hero {
+  .contact-hero {
+    flex-direction: column;
+  }
+  .contact-hero-oval {
+    position: absolute;
+    left: -10%;
+    top: -10%;
+    width: 75%;
+  }
+  .contact-hero-contents {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .contact-hero-contents .contact-hero-header {
+    font-size: 48px;
+  }
+  .contact-hero-form {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .contact-hero-form form {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    padding-bottom: 0;
-    height: 843px;
   }
-  .hero-contents {
-    margin-right: 0px;
-    text-align: center;
-  }
-  .hero-contents .hero-header {
-    font-size: 48px;
-  }
-  .hero-contents .hero-copy {
-    width: 70%;
-    margin-inline: auto;
-  }
-  .hero-oval {
-    right: -30px;
-    top: 45px;
-  }
-  .hero-img {
-    width: 300px;
-    transform: translateY(5%);
-  }
-  .services {
-    grid-template-columns: auto;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: "web" "app" "graphic";
-    grid-gap: 20px;
-  }
-  .services .service {
-    height: 200px;
-  }
-  .services .service.web {
-    background-image: url("/web-design-small.74f0f22c.png");
-  }
-  .services .service.web:after {
-    left: 0;
-    width: 0%;
-    height: 100%;
-  }
-  .services .service.web:hover:after {
+  .contact-hero-form form .form-group {
+    position: relative;
     width: 100%;
   }
-  .services .service.app {
-    height: 200px;
+  .contact-hero-form form .form-group:not(:last-child) {
+    margin-bottom: 30px;
   }
-  .services .service.graphic {
-    height: 200px;
-  }
-  #values-container {
-    margin-top: 80px;
-  }
-  .values {
+  .locations-choice {
     flex-direction: column;
   }
-  .values .value {
-    flex-direction: row;
+  .location-choice:not(:last-child) {
+    margin-bottom: 70px;
   }
-  .values .value:not(:last-child) {
-    margin-right: 0px;
-    margin-bottom: 50px;
-  }
-  .values .value-content {
-    width: 70%;
-    text-align: left;
-    margin-left: 30px;
-  }
-  .values .value-content .value-heading {
-    margin-bottom: 10px;
+  .location-choice-content .location-name {
+    font-weight: 40px;
   }
   .cta {
     flex-direction: column;
@@ -687,90 +629,6 @@ a {
   .header .menu-icon.open .fa-times {
     display: block;
   }
-  #hero-container {
-    margin-top: 92px;
-    width: 100%;
-  }
-  .hero {
-    width: 100%;
-    border-radius: 0px;
-    height: 1100px;
-    padding-top: 120px;
-    z-index: 6;
-  }
-  .hero-contents {
-    margin-right: 0px;
-    text-align: center;
-    width: 90%;
-    margin-bottom: 50px;
-  }
-  .hero-contents .hero-header {
-    font-size: 32px;
-  }
-  .hero-contents .hero-copy {
-    font-size: 15px;
-    width: 100%;
-    margin-inline: auto;
-  }
-  .hero-contents .hero-btn {
-    position: relative;
-    display: block;
-    z-index: 6;
-  }
-  .hero-oval {
-    right: -60%;
-    top: 45px;
-    width: 700px;
-  }
-  .hero-img {
-    width: 300px;
-    transform: translateY(5%);
-  }
-  .services .service {
-    height: 200px;
-  }
-  .services .service.web {
-    background-image: url("/web-design-small.74f0f22c.png");
-  }
-  .services .service.web:after {
-    left: 0;
-    width: 0%;
-    height: 100%;
-  }
-  .services .service.web:hover:after {
-    width: 100%;
-  }
-  .services .service.app {
-    height: 200px;
-  }
-  .services .service.graphic {
-    height: 200px;
-  }
-  .services .service .content .service-type {
-    font-size: 28px;
-    margin-bottom: 10px;
-  }
-  .services .service .content .link {
-    font-size: 15px;
-  }
-  .values .value {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .values .value:not(:last-child) {
-    margin-right: 0px;
-    margin-bottom: 50px;
-  }
-  .values .value-content {
-    width: 100%;
-    text-align: center;
-    margin-left: 0px;
-    margin-top: 40px;
-  }
-  .values .value-content .value-heading {
-    margin-bottom: 10px;
-  }
   .cta {
     padding: 70px 40px;
   }
@@ -837,51 +695,6 @@ a {
   }
   .bg-pattern {
     display: none;
-  }
-}
-@media (max-width: 768px) {
-  .contact-hero {
-    flex-direction: column;
-  }
-  .contact-hero-oval {
-    position: absolute;
-    left: -10%;
-    top: -10%;
-    width: 75%;
-  }
-  .contact-hero-contents {
-    width: 100%;
-    margin-bottom: 50px;
-  }
-  .contact-hero-contents .contact-hero-header {
-    font-size: 48px;
-  }
-  .contact-hero-form {
-    width: 100%;
-    margin-left: 0px;
-  }
-  .contact-hero-form form {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-  }
-  .contact-hero-form form .form-group {
-    position: relative;
-    width: 100%;
-  }
-  .contact-hero-form form .form-group:not(:last-child) {
-    margin-bottom: 30px;
-  }
-  .locations-choice {
-    flex-direction: column;
-  }
-  .location-choice:not(:last-child) {
-    margin-bottom: 70px;
-  }
-  .location-choice-content .location-name {
-    font-weight: 40px;
   }
 }
 
