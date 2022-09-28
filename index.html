@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"
       defer
@@ -81,8 +82,8 @@
 
     <section id="services-container">
       <div class="services">
-        <a href="web-design.html" class="service web">
-          <div class="content">
+        <a href="web-design.html" class="service web" data-aos="slide-up">
+          <div class="content" data-aos="fade">
             <div class="service-type">web design</div>
             <div class="link">
               view projects <span><i class="fa fa-angle-right"></i></span>
@@ -90,8 +91,8 @@
           </div>
         </a>
 
-        <a href="app-design.html" class="service app">
-          <div class="content">
+        <a href="app-design.html" class="service app" data-aos="slide-up">
+          <div class="content" data-aos="fade">
             <div class="service-type">app design</div>
             <div class="link">
               view projects <span><i class="fa fa-angle-right"></i></span>
@@ -99,8 +100,12 @@
           </div>
         </a>
 
-        <a href="graphic-design.html" class="service graphic">
-          <div class="content">
+        <a
+          href="graphic-design.html"
+          class="service graphic"
+          data-aos="slide-up"
+        >
+          <div class="content" data-aos="fade">
             <div class="service-type">graphic design</div>
             <div class="link">
               view projects <span><i class="fa fa-angle-right"></i></span>
@@ -112,7 +117,7 @@
 
     <section id="values-container">
       <div class="values">
-        <div class="value">
+        <div class="value value-1" data-aos="slide-up">
           <div class="value-img">
             <img
               src="./assets/home/desktop/illustration-passionate.svg"
@@ -139,7 +144,7 @@
           </div>
         </div>
 
-        <div class="value">
+        <div class="value value-2" data-aos="slide-up">
           <div class="value-img">
             <img
               src="./assets/home/desktop/illustration-resourceful.svg"
@@ -166,7 +171,7 @@
           </div>
         </div>
 
-        <div class="value">
+        <div class="value value-3" data-aos="slide-up">
           <div class="value-img">
             <img
               src="./assets/home/desktop/illustration-friendly.svg"
@@ -203,7 +208,7 @@
       />
     </div>
 
-    <section id="cta-container">
+    <section id="cta-container" data-aos="slide-up">
       <div class="cta-pattern">
         <img
           src="./assets/shared/desktop/bg-pattern-call-to-action.svg"
@@ -266,5 +271,10 @@
         </div>
       </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

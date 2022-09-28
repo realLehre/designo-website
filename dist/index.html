@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/main.d9ee62f6.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js" defer=""></script>
     <script src="/shared.a2f654bf.js" defer=""></script>
     <title>Designo</title>
@@ -66,8 +67,8 @@
 
     <section id="services-container">
       <div class="services">
-        <a href="/web-design.html" class="service web">
-          <div class="content">
+        <a href="/web-design.html" class="service web" data-aos="slide-up">
+          <div class="content" data-aos="fade">
             <div class="service-type">web design</div>
             <div class="link">
               view projects <span><i class="fa fa-angle-right"></i></span>
@@ -75,8 +76,8 @@
           </div>
         </a>
 
-        <a href="/app-design.html" class="service app">
-          <div class="content">
+        <a href="/app-design.html" class="service app" data-aos="slide-up">
+          <div class="content" data-aos="fade">
             <div class="service-type">app design</div>
             <div class="link">
               view projects <span><i class="fa fa-angle-right"></i></span>
@@ -84,8 +85,8 @@
           </div>
         </a>
 
-        <a href="/graphic-design.html" class="service graphic">
-          <div class="content">
+        <a href="/graphic-design.html" class="service graphic" data-aos="slide-up">
+          <div class="content" data-aos="fade">
             <div class="service-type">graphic design</div>
             <div class="link">
               view projects <span><i class="fa fa-angle-right"></i></span>
@@ -97,7 +98,7 @@
 
     <section id="values-container">
       <div class="values">
-        <div class="value">
+        <div class="value value-1" data-aos="slide-up">
           <div class="value-img">
             <img src="/illustration-passionate.afaa3730.svg" alt="" loading="lazy">
             <div class="value-pattern pattern-1">
@@ -116,7 +117,7 @@
           </div>
         </div>
 
-        <div class="value">
+        <div class="value value-2" data-aos="slide-up">
           <div class="value-img">
             <img src="/illustration-resourceful.9d409098.svg" alt="" loading="lazy">
             <div class="value-pattern pattern-2">
@@ -135,7 +136,7 @@
           </div>
         </div>
 
-        <div class="value">
+        <div class="value value-3" data-aos="slide-up">
           <div class="value-img">
             <img src="/illustration-friendly.593e2c4f.svg" alt="" loading="lazy">
 
@@ -161,7 +162,7 @@
       <img class="bg-pattern pattern-2" src="/bg-pattern-leaf.3f4a2461.svg" alt="">
     </div>
 
-    <section id="cta-container">
+    <section id="cta-container" data-aos="slide-up">
       <div class="cta-pattern">
         <img src="/bg-pattern-call-to-action.6daad57e.svg" alt="">
       </div>
@@ -221,5 +222,8 @@
         </div>
       </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
   </body>
 </html>
