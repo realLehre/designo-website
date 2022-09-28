@@ -610,6 +610,10 @@ footer {
   }
 }
 @media (max-width: 600px) {
+  #header-container {
+    padding: 20px 0;
+    height: auto;
+  }
   .header {
     align-items: flex-end;
   }
@@ -698,7 +702,7 @@ footer {
   }
   #hero-container {
     width: 100%;
-    margin-top: 94.5px;
+    margin-top: 73.2px;
   }
   .hero {
     border-radius: 0;
@@ -973,6 +977,10 @@ footer {
   }
 }
 @media (max-width: 600px) {
+  #header-container {
+    padding: 20px 0;
+    height: auto;
+  }
   .header {
     align-items: flex-end;
   }
@@ -1061,7 +1069,7 @@ footer {
   }
   #hero-container {
     width: 100%;
-    margin-top: 94.5px;
+    margin-top: 73.2px;
   }
   .hero {
     border-radius: 0;

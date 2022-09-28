@@ -21,3 +21,11 @@ window.addEventListener('scroll', () => {
     headerContainer.classList.remove('shadow');
   }
 });
+
+try {
+  gsap.from('#hero-container, #about-hero-container, #contact-hero-container', {
+    duration: 1,
+    y: '-100%',
+    ease: 'ease',
+  });
+} catch {}
