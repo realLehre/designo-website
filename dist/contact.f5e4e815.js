@@ -161,9 +161,35 @@ function validateEmail() {
 
   if (!re.test(email.value)) {
     document.querySelector('.email-format-error').classList.add('showError');
+
+    try {
+      document.querySelector('.email-error').classList.remove('showError');
+    } catch (err) {
+      console.log(err);
+    }
   } else {
     document.querySelector('.email-format-error').classList.remove('showError');
     check = true;
+  }
+}
+
+var checkPhone = false;
+
+function validatePhone() {
+  var phone = inputs[2];
+  var re = /((\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?)?\d{3}[\s.-]?\d{4}/;
+
+  if (!re.test(phone.value)) {
+    document.querySelector('.phone-format-error').classList.add('showError');
+
+    try {
+      document.querySelector('.phone-error').classList.remove('showError');
+    } catch (err) {
+      console.log(err);
+    }
+  } else {
+    document.querySelector('.phone-format-error').classList.remove('showError');
+    checkPhone = true;
   }
 }
 
@@ -176,6 +202,7 @@ form.addEventListener('submit', function (e) {
     } else {
       errorMessage.classList.remove('showError');
       validateEmail();
+      validatePhone();
     }
   });
 
@@ -185,14 +212,21 @@ form.addEventListener('submit', function (e) {
     textErrorMessage.classList.remove('showError');
   }
 
-  if (check) {
-    inputs.forEach(function (input) {
-      input.value = '';
-      input.style.borderBottom = '1px solid white';
-    });
-    textArea.value = '';
-    textArea.style.borderBottom = '1px solid white';
-  }
+  try {
+    if (check && checkPhone && inputs[0].value != '' && inputs[1].value != '' && inputs[2].value != '' && textAreaValue != '') {
+      inputs.forEach(function (input) {
+        input.value = '';
+        input.style.borderBottom = '1px solid white';
+      });
+      textArea.value = '';
+      textArea.style.borderBottom = '1px solid white';
+      var sentMessage = document.querySelector('.form-sent-message');
+      sentMessage.classList.add('show');
+      setTimeout(function () {
+        sentMessage.classList.remove('show');
+      }, 1000);
+    }
+  } catch (err) {}
 
   e.preventDefault();
 });

@@ -146,6 +146,17 @@ html {
   background: #ffad9b;
   color: #f1f3f5;
 }
+.contact-hero-form form .form-sent-message {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 30px;
+  align-self: center;
+  margin-top: 30px;
+  display: none;
+}
+.contact-hero-form form .form-sent-message.show {
+  display: block;
+}
 
 #locations-choice-container {
   margin-top: 120px;
