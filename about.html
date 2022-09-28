@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"
       defer
@@ -78,7 +79,7 @@
       <div class="talent">
         <div class="talent-img"></div>
 
-        <div class="talent-contents">
+        <div class="talent-contents" data-aos="fade-up">
           <h1 class="talent-header">World-class talent</h1>
 
           <p class="talent-copy">
@@ -107,7 +108,7 @@
 
     <section id="locations-choice-container">
       <div class="locations-choice">
-        <div class="location-choice">
+        <div class="location-choice" data-aos="fade-up">
           <div class="location-choice-img">
             <img
               src="./assets/shared//desktop/illustration-canada.svg"
@@ -129,7 +130,7 @@
           </div>
         </div>
 
-        <div class="location-choice">
+        <div class="location-choice" data-aos="fade-up">
           <div class="location-choice-img">
             <img
               src="./assets/shared/desktop/illustration-australia.svg"
@@ -151,7 +152,7 @@
           </div>
         </div>
 
-        <div class="location-choice">
+        <div class="location-choice" data-aos="fade-up">
           <div class="location-choice-img">
             <img
               src="./assets/shared/desktop/illustration-united-kingdom.svg"
@@ -185,7 +186,7 @@
 
     <section id="deal-container">
       <div class="deal">
-        <div class="deal-contents">
+        <div class="deal-contents" data-aos="fade-up">
           <h1 class="deal-header">World-class talent</h1>
 
           <p class="deal-copy">
@@ -222,7 +223,7 @@
         />
       </div>
       <div class="cta">
-        <div class="cta-content">
+        <div class="cta-content" data-aos="fade-up">
           <h2 class="cta-content-header">Let's talk about your project</h2>
 
           <p class="cta-content-copy">
@@ -277,5 +278,10 @@
         </div>
       </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

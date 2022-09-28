@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"
       defer
@@ -65,7 +66,7 @@
 
     <section id="core-container">
       <div class="cores">
-        <div class="core">
+        <div class="core" data-aos="fade-up">
           <div class="core-img">
             <img src="./assets/app-design/desktop/image-airfilter.jpg" alt="" />
           </div>
@@ -78,7 +79,7 @@
           </div>
         </div>
 
-        <div class="core">
+        <div class="core" data-aos="fade-up">
           <div class="core-img">
             <img src="./assets/app-design/desktop/image-eyecam.jpg" alt="" />
           </div>
@@ -91,7 +92,7 @@
           </div>
         </div>
 
-        <div class="core">
+        <div class="core" data-aos="fade-up">
           <div class="core-img">
             <img src="./assets/app-design/desktop/image-faceit.jpg" alt="" />
           </div>
@@ -103,7 +104,7 @@
           </div>
         </div>
 
-        <div class="core">
+        <div class="core" data-aos="fade-up">
           <div class="core-img">
             <img src="./assets/app-design/desktop/image-todo.jpg" alt="" />
           </div>
@@ -115,7 +116,7 @@
           </div>
         </div>
 
-        <div class="core">
+        <div class="core" data-aos="fade-up">
           <div class="core-img">
             <img
               src="./assets/app-design/desktop/image-loopstudios.jpg"
@@ -134,7 +135,7 @@
 
     <section id="services-container">
       <div class="services">
-        <a href="web-design.html" class="service web">
+        <a href="web-design.html" class="service web" data-aos="fade-up">
           <div class="content">
             <div class="service-type">web design</div>
             <div class="link">
@@ -143,7 +144,11 @@
           </div>
         </a>
 
-        <a href="graphic-design.html" class="service graphic">
+        <a
+          href="graphic-design.html"
+          class="service graphic"
+          data-aos="fade-up"
+        >
           <div class="content">
             <div class="service-type">graphic design</div>
             <div class="link">
@@ -162,7 +167,7 @@
         />
       </div>
       <div class="cta">
-        <div class="cta-content">
+        <div class="cta-content" data-aos="fade-up">
           <h2 class="cta-content-header">Let's talk about your project</h2>
 
           <p class="cta-content-copy">
@@ -217,5 +222,10 @@
         </div>
       </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

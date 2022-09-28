@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"
       defer
@@ -126,7 +127,7 @@
 
     <section id="locations-choice-container">
       <div class="locations-choice">
-        <div class="location-choice">
+        <div class="location-choice" data-aos="fade-up">
           <div class="location-choice-img">
             <img
               src="./assets/shared//desktop/illustration-canada.svg"
@@ -148,7 +149,7 @@
           </div>
         </div>
 
-        <div class="location-choice">
+        <div class="location-choice" data-aos="fade-up">
           <div class="location-choice-img">
             <img
               src="./assets/shared/desktop/illustration-australia.svg"
@@ -170,7 +171,7 @@
           </div>
         </div>
 
-        <div class="location-choice">
+        <div class="location-choice" data-aos="fade-up">
           <div class="location-choice-img">
             <img
               src="./assets/shared/desktop/illustration-united-kingdom.svg"
@@ -244,5 +245,9 @@
     </footer>
 
     <script src="contact.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
