@@ -108,6 +108,11 @@ html {
           transform: translateY(-50%);
           right: 0;
           color: c.$pri_white;
+          display: none;
+
+          &.showError {
+            @include c.flex;
+          }
 
           & img {
             margin-left: 8px;

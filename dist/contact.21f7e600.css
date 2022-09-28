@@ -116,6 +116,12 @@ html {
   transform: translateY(-50%);
   right: 0;
   color: #ffffff;
+  display: none;
+}
+.contact-hero-form form .form-group .error.showError {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .contact-hero-form form .form-group .error img {
   margin-left: 8px;
@@ -350,7 +356,7 @@ footer {
   position: relative;
   background: #1d1c1e;
   color: #ffffff;
-  padding: 130px 0px 40px;
+  padding: 130px 0px 70px;
   z-index: 3;
   width: 100vw;
 }
