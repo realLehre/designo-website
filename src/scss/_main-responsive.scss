@@ -228,6 +228,17 @@
               width: 0;
             }
           }
+
+          &.active {
+            &:after {
+              content: '';
+              position: absolute;
+              left: 0;
+              bottom: 0px;
+              width: 100%;
+              height: 1px solid c.$pri_white;
+            }
+          }
         }
       }
     }
@@ -451,9 +462,5 @@
 
   .footer-bottom-socials {
     margin-top: 40px;
-  }
-
-  .bg-pattern {
-    display: none;
   }
 }

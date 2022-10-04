@@ -236,4 +236,12 @@
 }
 
 @import 'shared';
+
+.bg-pattern.pattern-1 {
+  position: absolute;
+  top: 400px;
+  left: 0;
+  z-index: -1;
+}
+
 @import 'about-responsive';

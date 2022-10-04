@@ -175,6 +175,13 @@
               width: 0;
             }
           }
+
+          &.active {
+            text-decoration: underline;
+            &:after {
+              display: none;
+            }
+          }
         }
       }
     }

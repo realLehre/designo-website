@@ -2,11 +2,7 @@
 
 @import 'reset';
 
-.bg-pattern.pattern-1 {
-  position: absolute;
-  top: 600px;
-  z-index: 1;
-}
+@import 'shared';
 
 #hero-container {
   margin-top: 110px;
@@ -262,17 +258,13 @@
   }
 }
 
+// @import 'shared';
+
 .bg-pattern.pattern-2 {
   position: absolute;
-  bottom: -90%;
+  top: 130%;
   right: -20%;
   z-index: 1;
 }
-
-.bg-pattern.pattern-1,
-.bg-pattern.pattern-2 {
-  display: none;
-}
-@import 'shared';
 
 @import 'main-responsive';

@@ -2,8 +2,17 @@
 @import 'reset';
 @import 'shared';
 
+body {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
 #locations-container {
   margin-top: 130px;
+  width: 100vw;
+  flex-grow: 1;
 }
 
 .locations {

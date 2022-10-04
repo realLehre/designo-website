@@ -1,13 +1,16 @@
 @use 'config' as c;
 @import 'reset';
 
-html {
-  position: relative;
-  overflow-x: hidden;
+body {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
 }
 
 #contact-hero-container {
   margin-top: 110px;
+  width: 100vw;
 }
 
 .contact-hero {
@@ -147,6 +150,8 @@ html {
 #locations-choice-container {
   margin-top: 120px;
   margin-bottom: 120px;
+  width: 100vw;
+  flex-grow: 1;
 }
 
 .locations-choice {
@@ -204,4 +209,12 @@ html {
 }
 
 @import 'shared';
+
+.bg-pattern.pattern-2 {
+  position: absolute;
+  top: 55%;
+  right: -20%;
+  z-index: -1;
+}
+
 @import 'contact-responsive';
